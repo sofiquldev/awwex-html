@@ -9,7 +9,7 @@ class HTMLComponentBuilder {
         this.componentsDir = './src/components';
         this.layoutsDir = './src/layouts';
         this.pagesDir = './src/pages';
-        this.distDir = './dist';
+        this.distDir = './';
     }
 
     // Load component files

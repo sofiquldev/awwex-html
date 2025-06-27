@@ -138,6 +138,46 @@ function initializeTestimonialSwiper() {
     return testimonialSwiper;
 }
 
+// Hero Testimonial Swiper Configuration
+function initializeHeroTestimonialSwiper() {
+    console.log('Initializing hero testimonial swiper...');
+    const swiperElement = document.querySelector('.hero-testimonial-swiper');
+    
+    if (!swiperElement) {
+        console.error('Hero testimonial swiper element not found!');
+        return null;
+    }
+    
+    console.log('Hero testimonial swiper element found:', swiperElement);
+    
+    const heroTestimonialSwiper = new Swiper('.hero-testimonial-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.hero-testimonial-next',
+            prevEl: '.hero-testimonial-prev',
+        },
+        effect: 'slide',
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 600,
+        allowTouchMove: true,
+        on: {
+            init: function() {
+                console.log('Hero testimonial swiper initialized successfully!');
+            },
+            slideChange: function() {
+                console.log('Hero testimonial slide changed to:', this.activeIndex);
+            }
+        }
+    });
+    
+    return heroTestimonialSwiper;
+}
+
 // Phone Input Configuration
 function initializePhoneInput() {
     const phoneInput = document.querySelector("#phone");
@@ -226,6 +266,14 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeTestimonialSwiper();
     }
     
+    // Initialize Hero Testimonial Swiper if element exists
+    if (document.querySelector('.hero-testimonial-swiper')) {
+        console.log('Found hero testimonial swiper element, initializing...');
+        initializeHeroTestimonialSwiper();
+    } else {
+        console.log('Hero testimonial swiper element not found in DOM');
+    }
+    
     console.log('AwwEx components initialized successfully!');
 });
 
@@ -233,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 window.AwwEx = {
     initializeSwiper,
     initializeTestimonialSwiper,
+    initializeHeroTestimonialSwiper,
     initializePhoneInput,
     initializeSmoothScroll,
     initializeAnimations
