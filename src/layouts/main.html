@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - AwwEx</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Phone Input CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/css/intlTelInput.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Alpine Collapse Plugin for smooth accordion animations -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans bg-gray-50">
+    <component:header />
+    
+    <main>
+        {{content}}
+    </main>
+    
+    <component:footer />
+
+    <!-- JavaScript Libraries -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Phone Input JS -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="./js/main.js"></script>
+    
+    <!-- Initialize Components -->
+    <script>
+        // Initialize Phone Input
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneInput = document.querySelector("#phone");
+            if (phoneInput) {
+                window.intlTelInput(phoneInput, {
+                    initialCountry: "tr",
+                    preferredCountries: ["tr", "us", "gb", "de", "fr"],
+                    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/utils.js",
+                });
+            }
+        });
+    </script>
+</body>
+</html>

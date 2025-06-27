@@ -1,0 +1,271 @@
+<!-- International Shipping Tabs Section -->
+<section class="py-20 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="font-bold text-gray-900 mb-4 header-3">
+                Uluslararası Taşımacılık
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Awwex, parsiyelden konteynere, kara, hava ve deniz taşımacılığına kadar tüm lojistik ihtiyaçlarınıza çözüm sunar. Yükünüz ne olursa olsun, en uygun modelle güvenli ve zamanında teslimat sağlar.
+            </p>
+        </div>
+
+        <!-- Tabs Component -->
+        <div class="relative overflow-hidden">
+            <div x-data="{ activeTab: 'express' }" class="w-full">
+                <!-- Tab Navigation -->
+                <div class="flex flex-wrap justify-center text-center border-b border-gray-200 mb-12 tab-navigation">
+                    <button 
+                        @click="activeTab = 'express'" 
+                        :class="activeTab === 'express' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        class="py-7 px-5 border-b-2 font-medium transition-colors duration-200"
+                    >
+                        Awwex ile Express Kurye <br> Taşımacılığı
+                    </button>
+                    <button 
+                        @click="activeTab = 'parcel'" 
+                        :class="activeTab === 'parcel' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
+                    >
+                        Uluslararası Parsiyel <br>Taşımacılık
+                    </button>
+                    <button 
+                        @click="activeTab = 'container'" 
+                        :class="activeTab === 'container' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
+                    >
+                        Uluslararası Konteyner <br>Taşımacılık
+                    </button>
+                    <button 
+                        @click="activeTab = 'maritime'" 
+                        :class="activeTab === 'maritime' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
+                    >
+                        Denizyolu <br>Taşımacılığı
+                    </button>
+                    <button 
+                        @click="activeTab = 'air'" 
+                        :class="activeTab === 'air' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
+                    >
+                        Hava Kargo <br>Servisi
+                    </button>
+                </div>
+
+                <!-- Tab Content with Airplane Image -->
+                <div class="relative">
+                    <!-- Tab Content Container -->
+                    <div class="tab-content bg-gray-100 rounded-2xl p-8 lg:p-12 relative overflow-hidden">
+                        <!-- Express Tab -->
+                        <div x-show="activeTab === 'express'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
+                            <div class="max-w-4xl w-1/2">
+                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                                    Awwex ile Express Kurye Taşımacılığı
+                                </h3>
+                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                    Yurtdışı gönderileriniz için hızlı, güvenli ve izlenebilir taşıma çözümleri sunuyoruz. Kapıdan alım, hızlı gümrükleme ve öncelikli uçuşlarla zamanında teslimat sağlıyoruz.
+                                </p>
+                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                    Hemen Teklif Al
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Parcel Tab -->
+                        <div x-show="activeTab === 'parcel'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
+                            <div class="max-w-4xl w-1/2">
+                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                                    Uluslararası Parsiyel Taşımacılık
+                                </h3>
+                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                    Daha büyük hacimli gönderileriniz için ekonomik ve güvenilir çözümler. Konsolidasyon hizmetleri ile maliyetlerinizi optimize edin.
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Ekonomik Çözüm</h4>
+                                            <p class="text-gray-600 text-sm">Büyük hacimler için uygun fiyatlar</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Konsolidasyon</h4>
+                                            <p class="text-gray-600 text-sm">Farklı gönderileri birleştirme imkanı</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                    Fiyat Hesapla
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Container Tab -->
+                        <div x-show="activeTab === 'container'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
+                            <div class="max-w-4xl w-1/2">
+                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                                    Uluslararası Konteyner Taşımacılık
+                                </h3>
+                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                    Büyük hacimli ticari gönderileriniz için tam konteyner (FCL) ve parçalı konteyner (LCL) hizmetleri sunuyoruz.
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">FCL & LCL Seçenekleri</h4>
+                                            <p class="text-gray-600 text-sm">İhtiyacınıza göre esnek çözümler</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Gümrük Desteği</h4>
+                                            <p class="text-gray-600 text-sm">Kapsamlı gümrük işlemleri hizmeti</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                    Konteyner Rezerve Et
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Maritime Tab -->
+                        <div x-show="activeTab === 'maritime'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
+                            <div class="max-w-4xl w-1/2">
+                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                                    Denizyolu Taşımacılığı
+                                </h3>
+                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                    Ağır ve büyük hacimli kargolarınız için en ekonomik taşıma seçeneği. Güvenilir gemi hatları ile dünya çapında hizmet.
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Ekonomik Taşıma</h4>
+                                            <p class="text-gray-600 text-sm">En uygun fiyatlarla büyük kargolar</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Güvenilir Hatlar</h4>
+                                            <p class="text-gray-600 text-sm">Dünya çapında güvenilir gemi hatları</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                    Rota Sorgula
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Air Cargo Tab -->
+                        <div x-show="activeTab === 'air'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
+                            <div class="max-w-4xl w-1/2">
+                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                                    Hava Kargo Servisi
+                                </h3>
+                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                    Acil gönderileriniz için en hızlı çözüm. Premium hava kargo hizmetleri ile dünyanın her yerine ulaşım.
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Süper Hızlı</h4>
+                                            <p class="text-gray-600 text-sm">24-48 saat içinde teslimat</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Premium Hizmet</h4>
+                                            <p class="text-gray-600 text-sm">Özel işlem ve öncelikli gümrükleme</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                    Express Servis
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Airplane Image - Positioned outside tab body with overflow hidden -->
+                        <div class="absolute top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block" style="right: -5%; z-index: 10;">
+                            <img 
+                                src="/src/assets/images/airplane-for-tab.png" 
+                                alt="Airplane" 
+                                class="w-full h-auto opacity-90"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Tab transitions */
+[x-cloak] { 
+    display: none !important; 
+}
+
+/* Ensure the section container has overflow hidden */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Custom responsive adjustments */
+@media (max-width: 1024px) {
+    /* Hide airplane image on smaller screens */
+    .absolute.top-1\/2 {
+        display: none !important;
+    }
+    
+    /* Adjust tab navigation for mobile */
+    .flex-wrap button {
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-wrap {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .flex-wrap button {
+        border-bottom: 1px solid #e5e7eb;
+        border-right: none !important;
+        text-align: left;
+    }
+    
+    .flex-wrap button:last-child {
+        border-bottom: none;
+    }
+}
+</style>

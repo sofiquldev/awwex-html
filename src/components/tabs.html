@@ -1,0 +1,12 @@
+<!-- Tab Component -->
+<div x-data="{ activeTab: '{{default-tab}}' }" class="w-full">
+    <!-- Tab Navigation -->
+    <div class="flex flex-wrap justify-center border-b border-gray-200 mb-8">
+        {{slot:nav}}
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        {{slot:content}}
+    </div>
+</div>

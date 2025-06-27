@@ -1,0 +1,385 @@
+<!-- Header -->
+<header class="site-header bg-white shadow-sm relative" id="masthead" x-data="{ megaMenuOpen: '', mobileMenuOpen: false }">
+    <div class="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="header-row flex items-center justify-between h-[72px]">
+            <!-- Logo / Site Branding -->
+            <div class="site-branding flex-shrink-0">
+                <a href="#" class="site-title-link flex items-center" rel="home">
+                    <img src="/src/assets/images/logo.png" alt="brand-logo" class="h-8 w-auto">
+                </a>
+            </div>
+
+            <!-- Primary Navigation -->
+            <nav class="main-navigation hidden lg:flex items-center space-x-6" id="site-navigation" role="navigation" aria-label="Primary Menu">
+                <ul class="primary-menu-list flex items-center space-x-1 bg-gray-100 rounded-xl p-1">
+                    <!-- Hizmetlerimiz - Mega Menu Item -->
+                    <li class="menu-item menu-item-has-children mega-menu-item px-4 py-2 rounded-lg bg-transparent"
+                        :class="{'bg-white': megaMenuOpen === 'services'}">
+                        <div class="mega-menu-trigger relative" 
+                             @mouseenter="megaMenuOpen = 'services'" 
+                             @mouseleave="megaMenuOpen = ''">
+                            <button class="menu-link flex items-center text-gray-700 hover:text-orange-500 text-sm font-medium transition-colors duration-200">
+                                Hizmetlerimiz
+                                <span class="material-icons text-xs ml-1">keyboard_arrow_down</span>
+                            </button>
+                        </div>
+                    </li>
+
+                    <!-- Nasıl Çalışır - Dropdown Item -->
+                    <li class="menu-item menu-item-has-children px-4 py-2 rounded-lg bg-transparent"
+                        :class="{'bg-white': megaMenuOpen === 'how-it-works'}">
+                        <div class="dropdown-trigger relative" 
+                             @mouseenter="megaMenuOpen = 'how-it-works'" 
+                             @mouseleave="megaMenuOpen = ''">
+                            <button class="menu-link flex items-center text-gray-700 hover:text-orange-500 text-sm font-medium transition-colors duration-200">
+                                Nasıl Çalışır
+                                <span class="material-icons text-xs ml-1">keyboard_arrow_down</span>
+                            </button>
+                        </div>
+                    </li>
+
+                    <!-- Uluslararası Taşımacılık - Dropdown Item -->
+                    <li class="menu-item menu-item-has-children px-4 py-2 rounded-lg bg-transparent"
+                        :class="{'bg-white': megaMenuOpen === 'international'}">
+                        <div class="dropdown-trigger relative" 
+                             @mouseenter="megaMenuOpen = 'international'" 
+                             @mouseleave="megaMenuOpen = ''">
+                            <button class="menu-link flex items-center text-gray-700 hover:text-orange-500 text-sm font-medium transition-colors duration-200">
+                                Uluslararası Taşımacılık
+                                <span class="material-icons text-xs ml-1">keyboard_arrow_down</span>
+                            </button>
+                        </div>
+                    </li>
+
+                    <!-- Kayıtlar - Simple Link -->
+                    <li class="menu-item px-4 py-2 rounded-lg bg-transparent">
+                        <a href="#" class="menu-link text-gray-700 hover:text-orange-500 text-sm font-medium transition-colors duration-200">
+                            Kayıtlar
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions flex items-center space-x-4">
+                <!-- Contact Link -->
+                <a href="#" class="contact-link hidden lg:block text-gray-700 hover:text-orange-500 border border-gray-200 rounded-md px-4 py-[10px] text-sm font-medium transition-colors duration-200">
+                    Giriş Yap
+                </a>
+                
+                <!-- CTA Button -->
+                <a href="#" class="cta-button bg-orange-500 hover:bg-orange-600 text-white px-4 py-[10px] rounded-md text-sm font-medium transition-colors duration-200">
+                    Ücretsiz Kayıt Ol
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" 
+                        class="mobile-menu-toggle lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
+                        aria-label="Toggle Mobile Menu">
+                    <span class="material-icons text-gray-600" x-show="!mobileMenuOpen">menu</span>
+                    <span class="material-icons text-gray-600" x-show="mobileMenuOpen">close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-navigation lg:hidden bg-white border-t border-gray-200" 
+         x-show="mobileMenuOpen"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform -translate-y-2"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-2">
+        <div class="mobile-menu-container px-4 py-4 space-y-3">
+            <ul class="mobile-menu-list space-y-3">
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link block text-gray-700 hover:text-orange-500 font-medium py-2">Hizmetlerimiz</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link block text-gray-700 hover:text-orange-500 font-medium py-2">Nasıl Çalışır</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link block text-gray-700 hover:text-orange-500 font-medium py-2">Uluslararası Taşımacılık</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link block text-gray-700 hover:text-orange-500 font-medium py-2">Kayıtlar</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link block text-gray-700 hover:text-orange-500 font-medium py-2">İletişim</a>
+                </li>
+            </ul>
+            <div class="mobile-cta pt-3 border-t border-gray-200">
+                <a href="#" class="cta-button block bg-orange-500 hover:bg-orange-600 text-white text-center px-4 py-2 rounded-md font-medium">
+                    Giriş Yap | Kayıt Ol
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mega Menu Content for Hizmetlerimiz -->
+    <div class="mega-menu-dropdown absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 z-50 transition-all duration-300"
+         x-show="megaMenuOpen === 'services'"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform -translate-y-4"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-4"
+         @mouseenter="megaMenuOpen = 'services'"
+         @mouseleave="megaMenuOpen = ''">
+        <div class="mega-menu-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="mega-menu-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Yurt Dışı Kargo Category -->
+                <div class="mega-menu-category space-y-4">
+                    <div class="category-header flex items-center space-x-3 mb-4">
+                        <div class="category-icon w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-blue-600">public</span>
+                        </div>
+                        <h3 class="category-title font-semibold text-gray-900">Yurt Dışı Kargo</h3>
+                    </div>
+                    <p class="category-description text-sm text-gray-600 mb-4">Hızla ve güvenle gönderim</p>
+                    <ul class="submenu-items space-y-2">
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">check_circle</span>
+                                Yerel Kargo
+                            </a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">check_circle</span>
+                                Şehirler Arası Kargo
+                            </a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">check_circle</span>
+                                E-Ticaret Lojistiği
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Yurt İçi E-Ticaret Kargo Category -->
+                <div class="mega-menu-category space-y-4">
+                    <div class="category-header flex items-center space-x-3 mb-4">
+                        <div class="category-icon w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-green-600">shopping_cart</span>
+                        </div>
+                        <h3 class="category-title font-semibold text-gray-900">Yurt İçi E-Ticaret Kargo</h3>
+                    </div>
+                    <p class="category-description text-sm text-gray-600 mb-4">Standart ve özel E-ticaret!</p>
+                    <ul class="submenu-items space-y-2">
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">check_circle</span>
+                                Marketplace Yazılımı
+                            </a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">check_circle</span>
+                                Üçüncü Parti Lojistik
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Actions Highlight -->
+                <div class="mega-menu-highlight bg-gray-50 rounded-xl p-6">
+                    <h3 class="highlight-title font-semibold text-gray-900 mb-4">Fiyat Hesapla</h3>
+                    <p class="highlight-description text-sm text-gray-600 mb-4">Yurt içi ve yurt dışı kargoların için kıya öğrenin için kolay hesap</p>
+                    <ul class="highlight-actions space-y-3">
+                        <li class="highlight-action">
+                            <a href="#" class="action-link flex items-center justify-between text-sm font-medium text-orange-600 hover:text-orange-700 py-2 px-3 bg-white rounded-lg hover:shadow-sm transition-all duration-200">
+                                Yurtdışı Kargo Takibi
+                                <span class="material-icons text-sm">arrow_forward</span>
+                            </a>
+                        </li>
+                        <li class="highlight-action">
+                            <a href="#" class="action-link flex items-center justify-between text-sm font-medium text-orange-600 hover:text-orange-700 py-2 px-3 bg-white rounded-lg hover:shadow-sm transition-all duration-200">
+                                Kargo Ücret Hesapla
+                                <span class="material-icons text-sm">arrow_forward</span>
+                            </a>
+                        </li>
+                        <li class="highlight-action">
+                            <a href="#" class="action-link flex items-center justify-between text-sm font-medium text-orange-600 hover:text-orange-700 py-2 px-3 bg-white rounded-lg hover:shadow-sm transition-all duration-200">
+                                Belge Gönder
+                                <span class="material-icons text-sm">arrow_forward</span>
+                            </a>
+                        </li>
+                        <li class="highlight-action">
+                            <a href="#" class="action-link flex items-center justify-between text-sm font-medium text-orange-600 hover:text-orange-700 py-2 px-3 bg-white rounded-lg hover:shadow-sm transition-all duration-200">
+                                Nakliye Takibi Al
+                                <span class="material-icons text-sm">arrow_forward</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Content for Nasıl Çalışır -->
+    <div class="dropdown-menu absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 z-50 transition-all duration-300"
+         x-show="megaMenuOpen === 'how-it-works'"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform -translate-y-4"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-4"
+         @mouseenter="megaMenuOpen = 'how-it-works'"
+         @mouseleave="megaMenuOpen = ''">
+        <div class="dropdown-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-orange-600 text-2xl">inventory_2</span>
+                    </div>
+                    <h3 class="step-title font-semibold text-gray-900 mb-2">1. Paketleme</h3>
+                    <p class="step-description text-sm text-gray-600">Ürününüzü güvenli şekilde paketleyin</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-blue-600 text-2xl">qr_code</span>
+                    </div>
+                    <h3 class="step-title font-semibold text-gray-900 mb-2">2. Etiket Oluştur</h3>
+                    <p class="step-description text-sm text-gray-600">Online sistemden gönderim etiketi alın</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-green-600 text-2xl">local_shipping</span>
+                    </div>
+                    <h3 class="step-title font-semibold text-gray-900 mb-2">3. Teslimat</h3>
+                    <p class="step-description text-sm text-gray-600">Kargonuz güvenle teslim edilir</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-purple-600 text-2xl">track_changes</span>
+                    </div>
+                    <h3 class="step-title font-semibold text-gray-900 mb-2">4. Takip</h3>
+                    <p class="step-description text-sm text-gray-600">Anlık olarak kargonuzu takip edin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Content for Uluslararası Taşımacılık -->
+    <div class="dropdown-menu absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 z-50 transition-all duration-300"
+         x-show="megaMenuOpen === 'international'"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform -translate-y-4"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-4"
+         @mouseenter="megaMenuOpen = 'international'"
+         @mouseleave="megaMenuOpen = ''">
+        <div class="dropdown-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="regions-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Avrupa Region -->
+                <div class="region-category space-y-4">
+                    <div class="region-header flex items-center space-x-3 mb-4">
+                        <div class="region-icon w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-blue-600">flag</span>
+                        </div>
+                        <h3 class="region-title font-semibold text-gray-900">Avrupa</h3>
+                    </div>
+                    <p class="region-description text-sm text-gray-600 mb-4">AB ülkelerine hızlı teslimat</p>
+                    <ul class="region-countries space-y-2">
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Almanya
+                            </a>
+                        </li>
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Fransa
+                            </a>
+                        </li>
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                İngiltere
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Amerika Region -->
+                <div class="region-category space-y-4">
+                    <div class="region-header flex items-center space-x-3 mb-4">
+                        <div class="region-icon w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-red-600">public</span>
+                        </div>
+                        <h3 class="region-title font-semibold text-gray-900">Amerika</h3>
+                    </div>
+                    <p class="region-description text-sm text-gray-600 mb-4">Kuzey ve Güney Amerika</p>
+                    <ul class="region-countries space-y-2">
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                ABD
+                            </a>
+                        </li>
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Kanada
+                            </a>
+                        </li>
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Brezilya
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Asya Pasifik Region -->
+                <div class="region-category space-y-4">
+                    <div class="region-header flex items-center space-x-3 mb-4">
+                        <div class="region-icon w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-green-600">language</span>
+                        </div>
+                        <h3 class="region-title font-semibold text-gray-900">Asya Pasifik</h3>
+                    </div>
+                    <p class="region-description text-sm text-gray-600 mb-4">Uzak Doğu ülkeleri</p>
+                    <ul class="region-countries space-y-2">
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Çin
+                            </a>
+                        </li>
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Japonya
+                            </a>
+                        </li>
+                        <li class="country-item">
+                            <a href="#" class="country-link flex items-center text-sm text-gray-700 hover:text-orange-500 py-1 transition-colors duration-200">
+                                <span class="material-icons text-xs mr-2">location_on</span>
+                                Avustralya
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

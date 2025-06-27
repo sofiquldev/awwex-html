@@ -1,0 +1,63 @@
+<!-- Contact Section -->
+<section class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Left Content -->
+            <div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                    Maecenas nec elementum augue, in mattis est. Aliquam et sapien nec odio sodales bibendum. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Suspendisse id dignissim nunc.
+                </p>
+            </div>
+
+            <!-- Right Form -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+                <form class="space-y-6" x-data="contactForm" @submit.prevent="submitForm">
+                    <div>
+                        <input type="text" id="name" name="name" x-model="formData.name" placeholder="Ad Soyad" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors duration-200 placeholder-gray-500">
+                    </div>
+                    
+                    <div>
+                        <input type="email" id="email" name="email" x-model="formData.email" placeholder="E-Posta" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors duration-200 placeholder-gray-500">
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center">
+                            <img src="https://flagcdn.com/w20/tr.png" alt="TR" class="w-5 h-auto mr-2">
+                            <span class="text-gray-600">+90</span>
+                        </div>
+                        <input type="tel" id="phone" name="phone" x-model="formData.phone" placeholder="555 555 55 55" class="w-full px-4 py-3 pl-20 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors duration-200 placeholder-gray-500">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <input type="text" id="firstName" name="firstName" x-model="formData.firstName" placeholder="Firma Adı" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors duration-200 placeholder-gray-500">
+                        </div>
+                        <div>
+                            <input type="text" id="lastName" name="lastName" x-model="formData.lastName" placeholder="Ayla Fakat Soyad" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors duration-200 placeholder-gray-500">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <textarea id="message" name="message" rows="4" x-model="formData.message" placeholder="Mesaj" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors duration-200 placeholder-gray-500 resize-none"></textarea>
+                    </div>
+                    
+                    <div class="text-xs text-gray-500">
+                        <span class="text-red-500">*</span>Müşteri aydınlatma ve özlük verileri metinlerimiz
+                    </div>
+                    
+                    <div>
+                        <button type="submit" :disabled="loading" class="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+                            <span x-show="!loading">Gönder</span>
+                            <span x-show="loading">Gönderiliyor...</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

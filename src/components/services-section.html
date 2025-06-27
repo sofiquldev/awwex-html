@@ -1,0 +1,93 @@
+<!-- Services Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Single grid layout with featured card spanning 2 columns -->
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Featured Service Card - spans 2 columns -->
+            <div class="col-span-2">
+                <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-2xl p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10 text-center lg:text-left">
+                        <div class="w-full lg:w-[70%] relative">
+                            <h3 class="font-bold pl-2 mb-6 header-2">Yurt Dışı Gönderilerinizi Awwex ile Yönetin</h3>
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transform translate-x-[-65%] translate-y-[-65%]">
+                                <g clip-path="url(#clip0_699_8881)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0704 21.4499C9.09822 20.7356 6.23609 20.7823 3.22144 20.6967C2.63269 20.6801 2.14322 21.132 2.12549 21.7057C2.10776 22.2796 2.57238 22.7586 3.16113 22.7756C6.01973 22.8567 8.73999 22.7912 11.5632 23.4691C12.1342 23.6064 12.7123 23.265 12.8506 22.7077C12.9925 22.1507 12.6414 21.5868 12.0704 21.4499Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8309 15.3815C13.2983 10.5355 7.46761 5.96945 1.58016 2.77801C1.0659 2.4997 0.416831 2.68098 0.133099 3.18285C-0.150634 3.68471 0.0338085 4.31828 0.548072 4.59659C6.24045 7.68266 11.8797 12.0986 16.2598 16.7846C16.657 17.2081 17.3309 17.2375 17.7636 16.8504C18.1963 16.4633 18.2282 15.8051 17.8309 15.3815Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7832 14.1539C23.5316 9.72171 22.2548 5.15326 20.4496 1.12307C20.2119 0.597288 19.5842 0.357438 19.0486 0.58723C18.5095 0.817368 18.2648 1.43119 18.4989 1.95698C20.1445 5.62741 21.3646 9.77855 20.6836 13.8153C20.5879 14.3817 20.9816 14.9172 21.5597 15.0104C22.1378 15.104 22.6875 14.7199 22.7832 14.1539Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_699_8881">
+                                <rect width="23" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <button class="bg-white text-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+                            Hemen Teklif Al
+                        </button>
+                    </div>
+                    <!-- Background decoration -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="absolute bottom-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mb-12"></div>
+                </div>
+            </div>
+
+            <!-- Yurtiçi Kargo Service Card -->
+            <component:service-card icon="/src/assets/icons/domestic-cargo.svg" title="Yurtiçi Kargo" desc="Praesent tincidunt condimentum faucibus quam placerat." variant="1" buttonText="Şimdi İncele" buttonUrl="/services/domestic-cargo" />
+
+            <!-- Fullfilment ve Depolama Service -->
+            <component:service-card 
+                icon="/src/assets/icons/warehouse.svg" 
+                title="Fullfilment ve Depolama" 
+                desc="Praesent tincidunt condimentum faucibus quam placerat." 
+                variant="1"
+                buttonText="Şimdi İncele"
+                buttonUrl="/services/fulfillment-warehouse" />
+
+            <!-- Gümrükleme Service -->
+            <component:service-card 
+                icon="/src/assets/icons/customs.svg" 
+                title="Gümrükleme" 
+                desc="Praesent tincidunt condimentum faucibus quam placerat." 
+                variant="1"
+                buttonText="Şimdi İncele"
+                buttonUrl="/services/customs" />
+
+            <!-- Entegrasyonlar Service -->
+            <component:service-card 
+                icon="/src/assets/icons/integrations.svg" 
+                title="Entegrasyonlar" 
+                desc="Praesent tincidunt condimentum faucibus quam placerat." 
+                variant="1"
+                buttonText="Şimdi İncele"
+                buttonUrl="/services/integrations" />
+
+            <!-- Navlun yönetimi Service -->
+            <component:service-card 
+                icon="/src/assets/icons/freight.svg" 
+                title="Navlun yönetimi" 
+                desc="Praesent tincidunt condimentum faucibus quam placerat." 
+                variant="1"
+                buttonText="Şimdi İncele"
+                buttonUrl="/services/freight-management" />
+
+            <!-- E-İhracat Paneli Service -->
+            <component:service-card 
+                icon="/src/assets/icons/export-panel.svg" 
+                title="Awwex E-İhracat Paneli" 
+                desc="Praesent tincidunt condimentum faucibus quam placerat." 
+                variant="1"
+                buttonText="Şimdi İncele"
+                buttonUrl="/services/export-panel" />
+
+            <!-- Destek Merkezi Service -->
+            <component:service-card 
+                icon="/src/assets/icons/support.svg" 
+                title="Destek Merkezi" 
+                desc="Praesent tincidunt condimentum faucibus quam placerat." 
+                variant="1"
+                buttonText="Şimdi İncele"
+                buttonUrl="/support" />
+        </div>
+    </div>
+</section>

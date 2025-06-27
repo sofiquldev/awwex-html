@@ -1,0 +1,35 @@
+{
+  "name": "awwex",
+  "version": "1.0.0",
+  "description": "Awwex - Modern HTML project with Tailwind CSS, Alpine.js and UI components",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build-css:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build-html": "node build.js",
+    "build-html:watch": "node build.js --watch",
+    "build": "npm run build-css:prod && npm run build-html",
+    "dev": "npm run build-html:watch & npm run build-css & live-server --port=3000 --open=dist",
+    "start": "npm run build && live-server --port=3000 --open=dist"
+  },
+  "keywords": [
+    "html",
+    "tailwindcss",
+    "alpinejs",
+    "swiper",
+    "ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.0",
+    "swiper": "^11.0.0",
+    "intl-tel-input": "^19.2.0",
+    "@headlessui/tailwindcss": "^0.2.0"
+  },
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
+}

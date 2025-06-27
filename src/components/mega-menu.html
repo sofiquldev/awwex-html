@@ -1,0 +1,111 @@
+<!-- Hizmetlerimiz Mega Menu -->
+<div class="relative" x-data="{ open: false }">
+    <button @click="open = !open" @click.away="open = false" 
+            class="flex items-center text-gray-700 hover:text-primary-500 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        Hizmetlerimiz
+        <span class="material-icons text-sm ml-1 transition-transform duration-200" :class="{ 'rotate-180': open }">
+            keyboard_arrow_down
+        </span>
+    </button>
+    
+    <!-- Full Width Mega Menu Panel -->
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95"
+         class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-screen max-w-6xl bg-white rounded-lg shadow-xl border border-gray-200 z-50"
+         style="left: 50%; transform: translateX(-50%);">
+        
+        <!-- Content Grid -->
+        <div class="p-8">
+            <div class="grid grid-cols-2 gap-16">
+                <!-- Sol Sütun -->
+                <div class="space-y-6">
+                    <component:service-item 
+                        icon="flight_takeoff" 
+                        color="blue" 
+                        title="Yurt Dışı Kargo" 
+                        description="150+ ülkeye kargo gönderin" />
+                    
+                    <component:service-item 
+                        icon="local_shipping" 
+                        color="green" 
+                        title="Yurt İçi E-Ticaret Kargo" 
+                        description="E-ticaret siteleriniz için çözümler" />
+                    
+                    <component:service-item 
+                        icon="inventory_2" 
+                        color="purple" 
+                        title="E-Ticaret Lojistik" 
+                        description="Entegre lojistik çözümleri" />
+                    
+                    <component:service-item 
+                        icon="warehouse" 
+                        color="orange" 
+                        title="Fulfillment by Amazon (FBA)" 
+                        description="FBA servisleri ve depolama hizmeti" />
+                    
+                    <component:service-item 
+                        icon="account_balance" 
+                        color="yellow" 
+                        title="Finans Kaynakları" 
+                        description="İşe özel finans kaynak çözümleri" />
+                </div>
+
+                <!-- Sağ Sütun -->
+                <div class="space-y-6">
+                    <component:service-item 
+                        icon="local_gas_station" 
+                        color="red" 
+                        title="Nakliye Hizmetleri" 
+                        description="Uluslararası ve yurtiçi nakliye hizmetleri" 
+                        has-arrow="true" />
+
+                    <!-- Fiyat Hesapla - Special highlighted item -->
+                    <div class="bg-primary-50 border border-primary-200 rounded-lg p-4 hover:bg-primary-100 transition-colors duration-200">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="material-icons text-primary-600 text-lg">calculate</span>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-primary-900 mb-1">Fiyat Hesapla</h3>
+                                <p class="text-sm text-primary-700">Kargo maliyetini hızlı hesaplayın</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <component:service-item 
+                        icon="track_changes" 
+                        color="teal" 
+                        title="Yurtiçi Kargo Takibi" 
+                        description="Kargolarınızı gerçek zamanlı takip edin" 
+                        has-arrow="true" />
+
+                    <component:service-item 
+                        icon="receipt_long" 
+                        color="indigo" 
+                        title="Kargo Ücret Hesapla" 
+                        description="Kargo ücret hesaplama aracı" 
+                        has-arrow="true" />
+
+                    <component:service-item 
+                        icon="category" 
+                        color="pink" 
+                        title="Beşikçi Hizmetler" 
+                        description="Özel kargo çözümleri" 
+                        has-arrow="true" />
+
+                    <component:service-item 
+                        icon="support_agent" 
+                        color="cyan" 
+                        title="Hızlı Takip" 
+                        description="7/24 müşteri hizmetleri" 
+                        has-arrow="true" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

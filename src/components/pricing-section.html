@@ -1,0 +1,53 @@
+<!-- Pricing Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fiyat Paketleri</h2>
+            <p class="text-xl text-gray-600">İhtiyacınıza uygun paketi seçin</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Basic Plan -->
+            <component:pricing-card 
+                plan_name="Temel" 
+                price="99" 
+                period="ay"
+                description="Küçük işletmeler için ideal başlangıç paketi"
+                feature1="5 kg'a kadar kargo"
+                feature2="Yerel teslimat"
+                feature3="Online takip"
+                feature4="Email destek"
+                button_class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
+                button_text="Başla"
+                class="" />
+
+            <!-- Pro Plan -->
+            <component:pricing-card 
+                plan_name="Pro" 
+                price="199" 
+                period="ay"
+                description="Büyüyen işletmeler için kapsamlı çözüm"
+                feature1="20 kg'a kadar kargo"
+                feature2="Uluslararası teslimat"
+                feature3="Öncelikli destek"
+                feature4="API entegrasyonu"
+                button_class="bg-orange-500 text-white hover:bg-orange-600"
+                button_text="En Popüler"
+                class="border-2 border-orange-500 relative scale-105" />
+
+            <!-- Enterprise Plan -->
+            <component:pricing-card 
+                plan_name="Kurumsal" 
+                price="399" 
+                period="ay"
+                description="Büyük şirketler için özel çözümler"
+                feature1="Sınırsız kargo"
+                feature2="Özel fiyatlandırma"
+                feature3="7/24 destek"
+                feature4="Özel entegrasyon"
+                button_class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
+                button_text="İletişime Geç"
+                class="" />
+        </div>
+    </div>
+</section>

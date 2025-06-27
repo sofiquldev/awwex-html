@@ -1,0 +1,41 @@
+<!-- Pricing Card Component -->
+<div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 {{class}}">
+    <div class="text-center">
+        <!-- Plan Name -->
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">{{plan_name}}</h3>
+        
+        <!-- Price -->
+        <div class="mb-6">
+            <span class="text-4xl font-bold text-gray-900">₺{{price}}</span>
+            <span class="text-gray-500">/{{period}}</span>
+        </div>
+        
+        <!-- Description -->
+        <p class="text-gray-600 mb-8">{{description}}</p>
+        
+        <!-- Features -->
+        <div class="space-y-4 mb-8">
+            <div class="flex items-center">
+                <span class="material-icons text-green-500 mr-3 text-sm">check_circle</span>
+                <span class="text-gray-700">{{feature1}}</span>
+            </div>
+            <div class="flex items-center">
+                <span class="material-icons text-green-500 mr-3 text-sm">check_circle</span>
+                <span class="text-gray-700">{{feature2}}</span>
+            </div>
+            <div class="flex items-center">
+                <span class="material-icons text-green-500 mr-3 text-sm">check_circle</span>
+                <span class="text-gray-700">{{feature3}}</span>
+            </div>
+            <div class="flex items-center">
+                <span class="material-icons text-green-500 mr-3 text-sm">check_circle</span>
+                <span class="text-gray-700">{{feature4}}</span>
+            </div>
+        </div>
+        
+        <!-- CTA Button -->
+        <button class="w-full {{button_class}} px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+            {{button_text}}
+        </button>
+    </div>
+</div>
