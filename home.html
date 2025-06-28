@@ -30,7 +30,7 @@
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Header -->
-<header class="site-header bg-white shadow-sm relative" id="masthead" x-data="{ megaMenuOpen: '', mobileMenuOpen: false }">
+<header class="site-header bg-white shadow-sm sticky top-0 z-50" id="masthead" x-data="{ megaMenuOpen: '', mobileMenuOpen: false }">
     <div class="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="header-row flex items-center justify-between h-[72px]">
             <!-- Logo / Site Branding -->
@@ -473,7 +473,7 @@
             <!-- Accordion Component -->
 <div x-data="{ openAccordion: null }" class="space-y-4">
     <!-- Accordion Item Component -->
-<div class="bg-white rounded-lg shadow-md border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-300">
     <button @click="openAccordion = openAccordion === 1 ? null : 1" 
             class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
         <span class="font-medium text-gray-900">Kargo teslimat süreleri nedir?</span>
@@ -487,7 +487,7 @@
 </div>
 
                 <!-- Accordion Item Component -->
-<div class="bg-white rounded-lg shadow-md border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-300">
     <button @click="openAccordion = openAccordion === 2 ? null : 2" 
             class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
         <span class="font-medium text-gray-900">Hangi ülkelere kargo gönderebilirim?</span>
@@ -501,7 +501,7 @@
 </div>
 
                 <!-- Accordion Item Component -->
-<div class="bg-white rounded-lg shadow-md border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-300">
     <button @click="openAccordion = openAccordion === 3 ? null : 3" 
             class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
         <span class="font-medium text-gray-900">Kargo fiyatları nasıl hesaplanır?</span>
@@ -515,7 +515,7 @@
 </div>
 
                 <!-- Accordion Item Component -->
-<div class="bg-white rounded-lg shadow-md border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-300">
     <button @click="openAccordion = openAccordion === 4 ? null : 4" 
             class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
         <span class="font-medium text-gray-900">Kargom zarar görürse ne olur?</span>
@@ -529,7 +529,7 @@
 </div>
 
                 <!-- Accordion Item Component -->
-<div class="bg-white rounded-lg shadow-md border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-300">
     <button @click="openAccordion = openAccordion === 5 ? null : 5" 
             class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
         <span class="font-medium text-gray-900">Toplu kargo indirimi var mı?</span>
