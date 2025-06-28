@@ -1,13 +1,13 @@
 <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/anchor.svg" alt="{{ title }}" class="w-12 h-12 mb-4">
-    <h4 class="text-xl font-bold text-gray-900 mb-2">Gümrükleme</h4>
+    <img src="{{icon}}" alt="{{title}}" class="w-12 h-12 mb-4">
+    <h4 class="text-xl font-bold text-gray-900 mb-2">{{title}}</h4>
     <p class="text-gray-600 mb-4">
-        Praesent tincidunt condimentum faucibus quam placerat.
+        {{desc}}
     </p>
-    <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center transition-colors">
-        Şimdi İncele
+    <a href="{{buttonUrl}}" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center transition-colors">
+        {{buttonText}}
         <span class="material-icons ml-2 text-base align-middle">arrow_forward</span>
     </a>
 </div>
