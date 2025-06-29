@@ -31,7 +31,7 @@
 <body class="font-sans bg-gray-50">
     <!-- Header -->
 <header class="site-header bg-white shadow-sm sticky top-0 z-50" id="masthead" x-data="{ megaMenuOpen: '', mobileMenuOpen: false }">
-    <div class="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="header-container container">
         <div class="header-row flex items-center justify-between h-[72px]">
             <!-- Logo / Site Branding -->
             <div class="site-branding flex-shrink-0">
@@ -160,7 +160,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-4"
          @mouseenter="megaMenuOpen = 'services'"
          @mouseleave="megaMenuOpen = ''">
-        <div class="mega-menu-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mega-menu-container container py-8">
             <div class="mega-menu-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Yurt Dışı Kargo Category -->
                 <div class="mega-menu-category space-y-4">
@@ -264,7 +264,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-4"
          @mouseenter="megaMenuOpen = 'how-it-works'"
          @mouseleave="megaMenuOpen = ''">
-        <div class="dropdown-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="dropdown-container container py-8">
             <div class="steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Step 1 -->
                 <div class="process-step text-center">
@@ -316,7 +316,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-4"
          @mouseenter="megaMenuOpen = 'international'"
          @mouseleave="megaMenuOpen = ''">
-        <div class="dropdown-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="dropdown-container container py-8">
             <div class="regions-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Avrupa Region -->
                 <div class="region-category space-y-4">
@@ -425,7 +425,7 @@
         <img src="/assets/images/hero-noise.png" alt="hero-bg">
     </div>
     
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="container relative">
         <div class="grid lg:grid-cols-12 text-center lg:text-left gap-8 items-center">
             <!-- Left Content -->
             <div class="lg:col-span-5 max-w-md">
@@ -660,7 +660,7 @@
     <!-- Services Section -->
     <!-- Services Section -->
 <section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Single grid layout with featured card spanning 2 columns -->
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Featured Service Card - spans 2 columns -->
@@ -813,7 +813,7 @@
     <!-- E-commerce Integration Section -->
     <!-- E-commerce Integration Section -->
 <section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Section Header -->
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-900 mb-2">
@@ -935,7 +935,7 @@
 
 <!-- Video Section -->
 <section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Video Container -->
         <div class="max-w-6xl mx-auto">
             <div class="relative rounded-3xl overflow-hidden">
@@ -1052,7 +1052,7 @@ document.addEventListener('keydown', function(e) {
         <img src="/assets/images/contact-cta-bg.png" alt="hero-bg">
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="container relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Left Side - Image -->
             <div class="relative">
@@ -1131,7 +1131,7 @@ document.addEventListener('keydown', function(e) {
     <!-- Shipment Optimization Section -->
     <!-- Shipment Optimization Section Component -->
 <section class="py-20 bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <!-- Left Side - Image -->
             <div class="relative">
@@ -1328,7 +1328,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- International Shipping Tabs Section -->
     <!-- International Shipping Tabs Section -->
 <section class="py-20 bg-gray-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Section Header -->
         <div class="text-center mb-16">
             <h2 class="font-bold text-gray-900 mb-4 header-3">
@@ -1346,35 +1346,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flex flex-wrap justify-center text-center border-b border-gray-200 mb-12 tab-navigation">
                     <button 
                         @click="activeTab = 'express'" 
-                        :class="activeTab === 'express' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        :class="activeTab === 'express' ? 'border-orange-500 text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-700'"
                         class="py-7 px-5 border-b-2 font-medium transition-colors duration-200"
                     >
                         Awwex ile Express Kurye <br> Taşımacılığı
                     </button>
                     <button 
                         @click="activeTab = 'parcel'" 
-                        :class="activeTab === 'parcel' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        :class="activeTab === 'parcel' ? 'border-orange-500 text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-700'"
                         class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
                     >
                         Uluslararası Parsiyel <br>Taşımacılık
                     </button>
                     <button 
                         @click="activeTab = 'container'" 
-                        :class="activeTab === 'container' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        :class="activeTab === 'container' ? 'border-orange-500 text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-700'"
                         class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
                     >
                         Uluslararası Konteyner <br>Taşımacılık
                     </button>
                     <button 
                         @click="activeTab = 'maritime'" 
-                        :class="activeTab === 'maritime' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        :class="activeTab === 'maritime' ? 'border-orange-500 text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-700'"
                         class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
                     >
                         Denizyolu <br>Taşımacılığı
                     </button>
                     <button 
                         @click="activeTab = 'air'" 
-                        :class="activeTab === 'air' ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                        :class="activeTab === 'air' ? 'border-orange-500 text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-700'"
                         class="py-7 px-5 border-b-2 font-medium transition-colors duration-200 text-wrap"
                     >
                         Hava Kargo <br>Servisi
@@ -1387,14 +1387,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="tab-content bg-gray-100 rounded-2xl p-8 lg:p-12 relative overflow-hidden">
                         <!-- Express Tab -->
                         <div x-show="activeTab === 'express'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
-                            <div class="max-w-4xl w-1/2">
-                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                            <div class="max-w-4xl w-1/2 space-y-5">
+                                <h3 class="font-bold text-gray-900 header-2">
                                     Awwex ile Express Kurye Taşımacılığı
                                 </h3>
-                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                <p class="text-lg text-gray-600 leading-relaxed">
                                     Yurtdışı gönderileriniz için hızlı, güvenli ve izlenebilir taşıma çözümleri sunuyoruz. Kapıdan alım, hızlı gümrükleme ve öncelikli uçuşlarla zamanında teslimat sağlıyoruz.
                                 </p>
-                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                <button class="btn-primary">
                                     Hemen Teklif Al
                                 </button>
                             </div>
@@ -1402,17 +1402,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <!-- Parcel Tab -->
                         <div x-show="activeTab === 'parcel'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
-                            <div class="max-w-4xl w-1/2">
-                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                            <div class="max-w-4xl w-1/2 space-y-5">
+                                <h3 class="font-bold text-gray-900 header-2">
                                     Uluslararası Parsiyel Taşımacılık
                                 </h3>
-                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                <p class="text-lg text-gray-600 leading-relaxed">
                                     Daha büyük hacimli gönderileriniz için ekonomik ve güvenilir çözümler. Konsolidasyon hizmetleri ile maliyetlerinizi optimize edin.
                                 </p>
-                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="grid md:grid-cols-2 gap-6">
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Ekonomik Çözüm</h4>
@@ -1421,7 +1421,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Konsolidasyon</h4>
@@ -1429,7 +1429,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         </div>
                                     </div>
                                 </div>
-                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                <button class="btn-primary">
                                     Fiyat Hesapla
                                 </button>
                             </div>
@@ -1437,17 +1437,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <!-- Container Tab -->
                         <div x-show="activeTab === 'container'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
-                            <div class="max-w-4xl w-1/2">
-                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                            <div class="max-w-4xl w-1/2 space-y-5">
+                                <h3 class="font-bold text-gray-900 header-2">
                                     Uluslararası Konteyner Taşımacılık
                                 </h3>
-                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                <p class="text-lg text-gray-600 leading-relaxed">
                                     Büyük hacimli ticari gönderileriniz için tam konteyner (FCL) ve parçalı konteyner (LCL) hizmetleri sunuyoruz.
                                 </p>
-                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="grid md:grid-cols-2 gap-6">
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">FCL & LCL Seçenekleri</h4>
@@ -1456,7 +1456,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Gümrük Desteği</h4>
@@ -1464,7 +1464,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         </div>
                                     </div>
                                 </div>
-                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                <button class="btn-primary">
                                     Konteyner Rezerve Et
                                 </button>
                             </div>
@@ -1472,17 +1472,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <!-- Maritime Tab -->
                         <div x-show="activeTab === 'maritime'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
-                            <div class="max-w-4xl w-1/2">
-                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                            <div class="max-w-4xl w-1/2 space-y-5">
+                                <h3 class="font-bold text-gray-900 header-2">
                                     Denizyolu Taşımacılığı
                                 </h3>
-                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                <p class="text-lg text-gray-600 leading-relaxed">
                                     Ağır ve büyük hacimli kargolarınız için en ekonomik taşıma seçeneği. Güvenilir gemi hatları ile dünya çapında hizmet.
                                 </p>
-                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="grid md:grid-cols-2 gap-6">
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Ekonomik Taşıma</h4>
@@ -1491,7 +1491,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Güvenilir Hatlar</h4>
@@ -1499,7 +1499,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         </div>
                                     </div>
                                 </div>
-                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                <button class="btn-primary">
                                     Rota Sorgula
                                 </button>
                             </div>
@@ -1507,17 +1507,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <!-- Air Cargo Tab -->
                         <div x-show="activeTab === 'air'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0">
-                            <div class="max-w-4xl w-1/2">
-                                <h3 class="font-bold text-gray-900 mb-6 header-2">
+                            <div class="max-w-4xl w-1/2 space-y-5">
+                                <h3 class="font-bold text-gray-900 header-2">
                                     Hava Kargo Servisi
                                 </h3>
-                                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                <p class="text-lg text-gray-600 leading-relaxed">
                                     Acil gönderileriniz için en hızlı çözüm. Premium hava kargo hizmetleri ile dünyanın her yerine ulaşım.
                                 </p>
-                                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="grid md:grid-cols-2 gap-6">
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Süper Hızlı</h4>
@@ -1526,7 +1526,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span class="material-icons text-orange-600 text-sm">check</span>
+                                            <span class="material-icons text-gray-900 text-sm">check</span>
                                         </div>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">Premium Hizmet</h4>
@@ -1534,7 +1534,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         </div>
                                     </div>
                                 </div>
-                                <button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                                <button class="btn-primary">
                                     Express Servis
                                 </button>
                             </div>
@@ -1602,84 +1602,82 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Fan Fact Section -->
     <!-- Fan Fact Section -->
 <section class="relative">
-    <div class="max-w-7xl mx-auto p-4 md:p-8 lg:p-16 relative overflow-hidden rounded-3xl bg-gray-950">
-        <!-- Background Image -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-             style="background-image: url('/assets/images/fan-fact-bg.png');">
-            <!-- Dark overlay -->
-            <div class="absolute inset-0 bg-black/60"></div>
-            <!-- Dotted pattern overlay -->
-            <div class="absolute inset-0 opacity-30">
-                <div class="absolute inset-0" style="background-image: radial-gradient(circle, #FFA500 1px, transparent 1px); background-size: 20px 20px;"></div>
-            </div>
-        </div>
-        
-        <!-- Content -->
-        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Header -->
-            <div class="text-center mb-16">
-                <h2 class="font-bold text-white mb-4 header-1">
-                    Sınırları Aşan Başarı Hikayemiz
-                </h2>
-                <p class="text-lg text-white/80 max-w-2xl mx-auto">
-                    Maecenas nec elementum augue, in mattis est. Aliquam et sapien nec odio sodales bibendum.
-                </p>
-                
-                <!-- CTA Button -->
-                <div class="mt-8">
-                    <button class="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-full hover:bg-white/20 transition-all duration-300">
-                        Hemen Teklif Al
-                    </button>
-                </div>
+    <div class="container">
+        <div class="relative overflow-hidden rounded-3xl bg-gray-950 p-4 md:p-8 lg:p-16">
+            <!-- Background Image -->
+            <div class="absolute top-[25%] right-0 inset-0">
+                <img src="/assets/images/fan-fact-bg.png" alt="Fan Fact Background" class="w-full h-full object-cover rounded-3xl">
+                <!-- Dark overlay -->
+                <!-- <div class="absolute inset-0 bg-black/60"></div> -->
             </div>
             
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Stat Card 1 -->
-                <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div class="flex justify-center mb-4">
-                        <img src="/assets/icons/fan-fact/package-check.svg" alt="Package Check" class="w-12 h-12">
-                    </div>
-                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">10,482,739+</div>
-                    <div class="text-white/80 text-sm">
-                        Her ay binlerce<br>
-                        zamanında teslimat
-                    </div>
-                </div>
-                
-                <!-- Stat Card 2 -->
-                <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div class="flex justify-center mb-4">
-                        <img src="/assets/icons/fan-fact/users-03.svg" alt="Users" class="w-12 h-12">
-                    </div>
-                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
-                    <div class="text-white/80 text-sm">
-                        Her sektörden<br>
-                        binlerce iş ortağı
+            <!-- Content -->
+            <div class="relative z-10 max-w-6xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <h2 class="font-bold text-white mb-2 header-1">
+                        Sınırları Aşan Başarı Hikayemiz
+                    </h2>
+                    <p class="text-lg text-gray-100/80">
+                        Maecenas nec elementum augue, in mattis est. Aliquam et sapien nec odio sodales bibendum.
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <div class="mt-6">
+                        <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white w-full max-w-md px-8 py-3 rounded-[10px] hover:bg-white/20 transition-all duration-300">
+                            Hemen Teklif Al
+                        </button>
                     </div>
                 </div>
                 
-                <!-- Stat Card 3 -->
-                <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div class="flex justify-center mb-4">
-                        <img src="/assets/icons/fan-fact/clock-check.svg" alt="Clock Check" class="w-12 h-12">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Stat Card 1 -->
+                    <div class="glass-card p-6 hover:scale-105 transition-all duration-300">
+                        <div class="flex justify-start mb-6">
+                            <img src="/assets/icons/fan-fact/package-check.svg" alt="Package Check" class="w-12 h-12">
+                        </div>
+                        <div class="font-semibold text-white mb-2 header-3">10,482,739+</div>
+                        <div class="text-white/80 text-xs md:text-base max-w-48">
+                            Her ay binlerce
+                            zamanında teslimat
+                        </div>
                     </div>
-                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">%40</div>
-                    <div class="text-white/80 text-sm">
-                        %40'a varan<br>
-                        zaman tasarrufu
+                    
+                    <!-- Stat Card 2 -->
+                    <div class="glass-card p-6 hover:scale-105 transition-all duration-300">
+                        <div class="flex justify-start mb-6">
+                            <img src="/assets/icons/fan-fact/users-03.svg" alt="Users" class="w-12 h-12">
+                        </div>
+                        <div class="font-semibold text-white mb-2 header-3">1000+</div>
+                        <div class="text-white/80 text-xs md:text-base max-w-48">
+                            Her sektörden
+                            binlerce iş ortağı
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Stat Card 4 -->
-                <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
-                    <div class="flex justify-center mb-4">
-                        <img src="/assets/icons/fan-fact/globe-05.svg" alt="Globe" class="w-12 h-12">
+
+                    <!-- Stat Card 3 -->
+                    <div class="glass-card p-6 hover:scale-105 transition-all duration-300">
+                        <div class="flex justify-start mb-6">
+                            <img src="/assets/icons/fan-fact/clock-check.svg" alt="Clock Check" class="w-12 h-12">
+                        </div>
+                        <div class="font-semibold text-white mb-2 header-3">%40</div>
+                        <div class="text-white/80 text-xs md:text-base max-w-48">
+                            %40'a varan
+                            zaman tasarrufu
+                        </div>
                     </div>
-                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">220</div>
-                    <div class="text-white/80 text-sm">
-                        100+ ülkeye<br>
-                        taşıma ağı
+
+                    <!-- Stat Card 4 -->
+                    <div class="glass-card p-6 hover:scale-105 transition-all duration-300">
+                        <div class="flex justify-start mb-6">
+                            <img src="/assets/icons/fan-fact/globe-05.svg" alt="Globe" class="w-12 h-12">
+                        </div>
+                        <div class="font-semibold text-white mb-2 header-3">220</div>
+                        <div class="text-white/80 text-xs md:text-base max-w-48">
+                            100+ ülkeye
+                            taşıma ağı
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1691,14 +1689,14 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Cargo Optimization Section -->
     <!-- Cargo Optimization Section Component -->
 <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 class="font-bold text-gray-900 mb-4 header-3">
                 Yurtdışı Kargolarınız Awwex ile Optimize
             </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Awwex, paket yüklerinden konteyner taşımacılığına, kargolarınızın hızla ve deniz taşımacılığı hasar risklerini en aza indirgeyerek veya güvenliği ve zamanında teslimini sağlayınız.
+            <p class="text-gray-600 max-w-6xl mx-auto">
+                Awwex, parsiyel yüklerden konteyner taşımacılığına, karayolundan hava ve deniz taşımacılığına kadar tüm uluslararası lojistik ihtiyaçlarınıza kapsamlı çözümler sunar. Yükünüzün türü ne olursa olsun, en uygun taşıma modeliyle dünya çapında güvenli ve zamanında teslimat sağlarız.
             </p>
         </div>
 
@@ -1711,7 +1709,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative h-[600px] mx-4">
                             <!-- Content Area (40%) -->
                             <div class="flex flex-col h-2/5 p-6 relative z-10">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <h3 class="text-xl font-bold text-gray-900 mb-6">
                                     Yurt Dışı Kargo
                                 </h3>
                                 <p class="text-gray-600 text-sm leading-relaxed">
@@ -1731,7 +1729,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
 
                             <!-- Button positioned absolutely at left-bottom -->
-                            <button class="absolute bottom-4 left-6 bg-white hover:bg-gray-100 text-orange-600 px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-sm z-20 flex items-center gap-2 shadow-md">
+                            <button class="absolute bottom-4 left-6 z-20 btn-secondary px-4 py-2 text-sm flex items-center gap-2 shadow-md">
                                 Keşfet
                                 <span class="material-icons text-base">arrow_forward</span>
                             </button>
@@ -1743,7 +1741,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative h-[600px] mx-4">
                             <!-- Content Area (40%) -->
                             <div class="flex flex-col h-2/5 p-6 relative z-10">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <h3 class="text-xl font-bold text-gray-900 mb-6">
                                     Gümrükleme
                                 </h3>
                                 <p class="text-gray-600 text-sm leading-relaxed">
@@ -1763,7 +1761,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
 
                             <!-- Button positioned absolutely at left-bottom -->
-                            <button class="absolute bottom-4 left-6 bg-white hover:bg-gray-100 text-orange-600 px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-sm z-20 flex items-center gap-2 shadow-md">
+                            <button class="absolute bottom-4 left-6 z-20 btn-secondary px-4 py-2 text-sm flex items-center gap-2 shadow-md">
                                 Keşfet
                                 <span class="material-icons text-base">arrow_forward</span>
                             </button>
@@ -1775,7 +1773,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative h-[600px] mx-4">
                             <!-- Content Area (40%) -->
                             <div class="flex flex-col h-2/5 p-6 relative z-10">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <h3 class="text-xl font-bold text-gray-900 mb-6">
                                     Navlun Lojistik Yönetimi
                                 </h3>
                                 <p class="text-gray-600 text-sm leading-relaxed">
@@ -1795,7 +1793,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
 
                             <!-- Button positioned absolutely at left-bottom -->
-                            <button class="absolute bottom-4 left-6 bg-white hover:bg-gray-100 text-orange-600 px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-sm z-20 flex items-center gap-2 shadow-md">
+                            <button class="absolute bottom-4 left-6 z-20 btn-secondary px-4 py-2 text-sm flex items-center gap-2 shadow-md">
                                 Keşfet
                                 <span class="material-icons text-base">arrow_forward</span>
                             </button>
@@ -1967,112 +1965,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-    <!-- Global Coverage Section -->
-    <!-- Global Coverage Section -->
-<section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Content positioned over the map -->
-        <div class="w-1/2">
-            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-                Donec non vulputate massa, non finibus lectus.
-            </h2>
-            <!-- <p class="text-lg text-gray-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie ex vitae elit pulvinar.
-            </p> -->
-        </div>
-        <!-- Full Width Map -->
-        <div class="relative w-full">
-            <img src="/assets/images/maps-pin.png" alt="Global Coverage Map" class="w-full h-auto">
-        </div>
-    </div>
-</section>
-
-
-    <!-- Image Showcase Section -->
-    <!-- Son Eklenen Yazılar Section -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="mb-12">
-            <h2 class="font-bold text-gray-900 header-3">
-                Son Eklenen Yazılar
-            </h2>
-        </div>
-
-        <!-- Main Featured Article (Full Width - Horizontal Layout) -->
-        <div class="mb-8">
-            <div class="bg-white rounded-xl overflow-hidden border border-gray-200">
-                <div class="grid lg:grid-cols-2 gap-0">
-                    <!-- Left Side - Image -->
-                    <div class="aspect-[4/3] lg:aspect-auto bg-gray-100">
-                        <img src="https://placehold.co/500x375/E5E7EB/9CA3AF?text=" alt="Featured Article" class="w-full h-full object-cover">
-                    </div>
-                    <!-- Right Side - Content -->
-                    <div class="p-8 flex flex-col justify-center items-start">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">E-İHRACAT</span>
-                            <span class="text-xs text-gray-500 font-medium uppercase">8 DAKIKALIK BİR YAZI</span>
-                        </div>
-                        <h3 class="font-bold text-gray-900 mb-4 header-3">
-                            Awwex E-İhracat Paneli
-                        </h3>
-                        <p class="text-gray-600 text-base leading-relaxed mb-6">
-                            Quisque ultrices ante lorem, maximus placerat elit mattis eget. Nullam non libero sagittis, placerat tellus ut, faucibus mauris. Aliquam sed tempor turpis, vitae sodales lectus. Praesent tincidunt condimentum faucibus quam placerat.
-                        </p>
-                        <button class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-900 text-sm font-semibold hover:border-orange-500 hover:text-orange-600 transition-colors">
-                            Devamını Oku
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Three Cards in a Row -->
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Orange Card -->
-            <div class="bg-orange-500 rounded-xl p-4 text-white flex items-start gap-4">
-                <div class="w-20 h-20 bg-white rounded flex-shrink-0 mt-1"></div>
-                <div>
-                    <span class="text-white text-xs font-medium uppercase opacity-90 mb-3 block">8 DAKIKALIK BİR YAZI</span>
-                    <h3 class="text-base font-bold leading-tight">
-                        Praesent tincidunt condimentum faucibus quam placerat.
-                    </h3>
-                </div>
-            </div>
-
-            <!-- White Card 1 -->
-            <div class="bg-white rounded-xl p-4 border border-gray-200 flex items-start gap-4">
-                <div class="w-20 h-20 bg-gray-200 rounded flex-shrink-0 mt-1"></div>
-                <div>
-                    <span class="text-gray-500 text-xs font-medium uppercase mb-3 block">8 DAKIKALIK BİR YAZI</span>
-                    <h3 class="text-base font-bold text-gray-900 leading-tight">
-                        Praesent tincidunt condimentum faucibus quam placerat.
-                    </h3>
-                </div>
-            </div>
-
-            <!-- White Card 2 -->
-            <div class="bg-white rounded-xl p-4 border border-gray-200 flex items-start gap-4">
-                <div class="w-20 h-20 bg-gray-200 rounded flex-shrink-0 mt-1"></div>
-                <div>
-                    <span class="text-gray-500 text-xs font-medium uppercase mb-3 block">8 DAKIKALIK BİR YAZI</span>
-                    <h3 class="text-base font-bold text-gray-900 leading-tight">
-                        Praesent tincidunt condimentum faucibus quam placerat.
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
     <!-- E-book Resources Section -->
     <!-- E-book Resources Section -->
 <section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Section Header -->
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -2181,10 +2077,113 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 
+    <!-- Global Coverage Section -->
+    <!-- Global Coverage Section -->
+<section class="py-16 lg:py-24 bg-white">
+    <div class="container">
+        <!-- Content positioned over the map -->
+        <div class="w-1/2">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                Donec non vulputate massa, non finibus lectus.
+            </h2>
+            <!-- <p class="text-lg text-gray-600 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie ex vitae elit pulvinar.
+            </p> -->
+        </div>
+        <!-- Full Width Map -->
+        <div class="relative w-full">
+            <img src="/assets/images/maps-pin.png" alt="Global Coverage Map" class="w-full h-auto">
+        </div>
+    </div>
+</section>
+
+
+    <!-- Image Showcase Section -->
+    <!-- Son Eklenen Yazılar Section -->
+<section class="py-20 bg-white">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="mb-12">
+            <h2 class="font-bold text-gray-900 header-3">
+                Son Eklenen Yazılar
+            </h2>
+        </div>
+
+        <!-- Main Featured Article (Full Width - Horizontal Layout) -->
+        <div class="mb-8">
+            <div class="bg-white rounded-xl overflow-hidden border border-gray-200">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <!-- Left Side - Image -->
+                    <div class="aspect-[4/3] lg:aspect-auto bg-gray-100">
+                        <img src="https://placehold.co/500x375/E5E7EB/9CA3AF?text=" alt="Featured Article" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Right Side - Content -->
+                    <div class="p-8 flex flex-col justify-center items-start">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">E-İHRACAT</span>
+                            <span class="text-xs text-gray-500 font-medium uppercase">8 DAKIKALIK BİR YAZI</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-4 header-3">
+                            Awwex E-İhracat Paneli
+                        </h3>
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            Quisque ultrices ante lorem, maximus placerat elit mattis eget. Nullam non libero sagittis, placerat tellus ut, faucibus mauris. Aliquam sed tempor turpis, vitae sodales lectus. Praesent tincidunt condimentum faucibus quam placerat.
+                        </p>
+                        <button class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-900 text-sm font-semibold hover:border-orange-500 hover:text-orange-600 transition-colors">
+                            Devamını Oku
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Three Cards in a Row -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Orange Card -->
+            <div class="bg-orange-500 rounded-xl p-4 text-white flex items-start gap-4">
+                <div class="w-20 h-20 bg-white rounded flex-shrink-0 mt-1"></div>
+                <div>
+                    <span class="text-white text-xs font-medium uppercase opacity-90 mb-3 block">8 DAKIKALIK BİR YAZI</span>
+                    <h3 class="text-base font-bold leading-tight">
+                        Praesent tincidunt condimentum faucibus quam placerat.
+                    </h3>
+                </div>
+            </div>
+
+            <!-- White Card 1 -->
+            <div class="bg-white rounded-xl p-4 border border-gray-200 flex items-start gap-4">
+                <div class="w-20 h-20 bg-gray-200 rounded flex-shrink-0 mt-1"></div>
+                <div>
+                    <span class="text-gray-500 text-xs font-medium uppercase mb-3 block">8 DAKIKALIK BİR YAZI</span>
+                    <h3 class="text-base font-bold text-gray-900 leading-tight">
+                        Praesent tincidunt condimentum faucibus quam placerat.
+                    </h3>
+                </div>
+            </div>
+
+            <!-- White Card 2 -->
+            <div class="bg-white rounded-xl p-4 border border-gray-200 flex items-start gap-4">
+                <div class="w-20 h-20 bg-gray-200 rounded flex-shrink-0 mt-1"></div>
+                <div>
+                    <span class="text-gray-500 text-xs font-medium uppercase mb-3 block">8 DAKIKALIK BİR YAZI</span>
+                    <h3 class="text-base font-bold text-gray-900 leading-tight">
+                        Praesent tincidunt condimentum faucibus quam placerat.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
     <!-- Contact Section -->
     <!-- Contact Section -->
 <section class="bg-gray-50 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <!-- Left Content -->
             <div>
@@ -2250,7 +2249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Testimonial Slider Section -->
     <!-- Testimonial Slider Section -->
 <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <!-- Section Header -->
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kullanıcı Hikayeleri</h2>
@@ -2429,7 +2428,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- FAQ Section -->
 <section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <div class="grid lg:grid-cols-2 gap-12 items-start">
             <!-- Left Side - Title and Description -->
             <div class="lg:sticky lg:top-8">

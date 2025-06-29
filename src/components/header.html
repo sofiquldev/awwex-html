@@ -1,6 +1,6 @@
 <!-- Header -->
 <header class="site-header bg-white shadow-sm sticky top-0 z-50" id="masthead" x-data="{ megaMenuOpen: '', mobileMenuOpen: false }">
-    <div class="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="header-container container">
         <div class="header-row flex items-center justify-between h-[72px]">
             <!-- Logo / Site Branding -->
             <div class="site-branding flex-shrink-0">
@@ -129,7 +129,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-4"
          @mouseenter="megaMenuOpen = 'services'"
          @mouseleave="megaMenuOpen = ''">
-        <div class="mega-menu-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mega-menu-container container py-8">
             <div class="mega-menu-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Yurt Dışı Kargo Category -->
                 <div class="mega-menu-category space-y-4">
@@ -233,7 +233,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-4"
          @mouseenter="megaMenuOpen = 'how-it-works'"
          @mouseleave="megaMenuOpen = ''">
-        <div class="dropdown-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="dropdown-container container py-8">
             <div class="steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Step 1 -->
                 <div class="process-step text-center">
@@ -285,7 +285,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-4"
          @mouseenter="megaMenuOpen = 'international'"
          @mouseleave="megaMenuOpen = ''">
-        <div class="dropdown-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="dropdown-container container py-8">
             <div class="regions-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Avrupa Region -->
                 <div class="region-category space-y-4">

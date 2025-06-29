@@ -592,6 +592,28 @@ html {
   }
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .btn-primary {
   display: inline-flex;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -871,6 +893,10 @@ html {
   top: 17%;
 }
 
+.top-\[25\%\] {
+  top: 25%;
+}
+
 .top-\[35\%\] {
   top: 35%;
 }
@@ -899,14 +925,6 @@ html {
   top: 100%;
 }
 
-.left-1\/3 {
-  left: 33.333333%;
-}
-
-.left-1\/4 {
-  left: 25%;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -921,10 +939,6 @@ html {
 
 .z-\[11\] {
   z-index: 11;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .col-span-2 {
@@ -1031,6 +1045,10 @@ html {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -1181,6 +1199,10 @@ html {
   width: 0.5rem;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .w-20 {
   width: 5rem;
 }
@@ -1221,16 +1243,16 @@ html {
   width: 100vw;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
 .max-w-2xl {
   max-width: 42rem;
 }
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-48 {
+  max-width: 12rem;
 }
 
 .max-w-4xl {
@@ -1243,10 +1265,6 @@ html {
 
 .max-w-72 {
   max-width: 18rem;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
 }
 
 .max-w-\[140px\] {
@@ -1390,6 +1408,10 @@ html {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -1488,6 +1510,12 @@ html {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1518,6 +1546,10 @@ html {
 
 .rounded-3xl {
   border-radius: 1.5rem;
+}
+
+.rounded-\[10px\] {
+  border-radius: 10px;
 }
 
 .rounded-full {
@@ -1689,6 +1721,11 @@ html {
   background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1));
 }
 
+.bg-pink-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 231 243 / var(--tw-bg-opacity, 1));
+}
+
 .bg-primary-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 228 204 / var(--tw-bg-opacity, 1));
@@ -1707,11 +1744,6 @@ html {
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity, 1));
 }
 
 .bg-rose-100 {
@@ -1740,21 +1772,12 @@ html {
   background-color: rgb(255 255 255 / 0.95);
 }
 
-.bg-pink-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 231 243 / var(--tw-bg-opacity, 1));
-}
-
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
 
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
-}
-
-.bg-opacity-90 {
-  --tw-bg-opacity: 0.9;
 }
 
 .bg-gradient-to-b {
@@ -1851,18 +1874,6 @@ html {
 
 .to-zinc-100 {
   --tw-gradient-to: #f4f4f5 var(--tw-gradient-to-position);
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .object-contain {
@@ -2115,6 +2126,10 @@ html {
   color: rgb(37 99 235 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-100\/80 {
+  color: rgb(243 244 246 / 0.8);
+}
+
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
@@ -2251,10 +2266,6 @@ html {
   opacity: 1;
 }
 
-.opacity-30 {
-  opacity: 0.3;
-}
-
 .opacity-40 {
   opacity: 0.4;
 }
@@ -2265,10 +2276,6 @@ html {
 
 .opacity-90 {
   opacity: 0.9;
-}
-
-.opacity-20 {
-  opacity: 0.2;
 }
 
 .shadow-lg {
@@ -2303,6 +2310,12 @@ html {
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-blur-sm {
@@ -2460,14 +2473,17 @@ html {
 
 .header-1 {
   font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.25;
 }
 
 .header-2 {
   font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.25;
 }
 
 .header-3 {
   font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.25;
 }
 
 .hover\:scale-105:hover {
@@ -2542,10 +2558,6 @@ html {
 
 .hover\:bg-white\/30:hover {
   background-color: rgb(255 255 255 / 0.3);
-}
-
-.hover\:bg-opacity-100:hover {
-  --tw-bg-opacity: 1;
 }
 
 .hover\:text-gray-300:hover {
@@ -2862,11 +2874,6 @@ html {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .lg\:text-5xl {

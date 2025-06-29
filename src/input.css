@@ -13,10 +13,12 @@
 }
 
 @layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
   .btn-primary {
     @apply bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-[12px] rounded-xl leading-none transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center shadow-none border-b-4 border-b-orange-600;
   }
-  
   .btn-secondary {
     @apply bg-white border border-gray-300 border-b-2 border-b-gray-200 text-gray-900 font-medium px-8 py-[12px] rounded-xl leading-none transition-all duration-300 inline-flex items-center justify-center shadow-none hover:bg-gray-50;
   }
@@ -114,10 +116,13 @@
 /* headers font size class */
 .header-1 {
   font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.25;
 }
 .header-2 {
   font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.25;
 }
 .header-3 {
   font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.25;
 }
