@@ -4,8 +4,8 @@
   "description": "Awwex - Modern HTML project with Tailwind CSS, Alpine.js and UI components",
   "main": "index.html",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
-    "build-css:prod": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
+    "build-css": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch",
+    "build-css:prod": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --minify",
     "build-html": "node build.js",
     "build-html:watch": "node build.js --watch",
     "build": "npm run build-css:prod && npm run build-html",

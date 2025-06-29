@@ -6,7 +6,7 @@
     <title>AwwEx - AwwEx</title>
     
     <!-- Tailwind CSS -->
-    <link href="/css/output.css" rel="stylesheet">
+    <link href="/assets/css/output.css" rel="stylesheet">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
             <!-- Logo / Site Branding -->
             <div class="site-branding flex-shrink-0">
                 <a href="#" class="site-title-link flex items-center" rel="home">
-                    <img src="/src/assets/images/logo.png" alt="brand-logo" class="h-8 w-auto">
+                    <img src="/assets/images/logo.png" alt="brand-logo" class="h-8 w-auto">
                 </a>
             </div>
 
@@ -419,167 +419,162 @@
     <main>
         <!-- Hero Section -->
     <!-- Hero Section -->
-<section class="relative py-20 md:py-32 overflow-hidden">
+<section class="relative py-20 md:py-12 overflow-hidden">
     <!-- Background decorative elements -->
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-100/30 to-transparent"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/5 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+    <div class="hidden md:block absolute top-1/2 right-0 w-1/2 h-full transform -translate-y-1/3">
+        <img src="/assets/images/hero-noise.png" alt="hero-bg">
+    </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="grid lg:grid-cols-12 text-center lg:text-left gap-8 items-center">
             <!-- Left Content -->
-            <div class="lg:col-span-5">
-                <h1 class="font-bold text-gray-900 mb-6 leading-tight header-1">
-                    Yurt Dışı Gönderilerinizi Awwex ile Yönetin
-                </h1>
-                
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
-                    Dünyanın dört bir yanına gönderim yapmak artık çok daha kolay! 200+ ülkeye özel kargo tekliflerinizi tek adrestan gönderin, karşılaştırın ve satın almanızla yönetin.
-                </p>
-                
-                <!-- CTA Button -->
-                <div class="mb-8 lg:mb-12 flex items-center lg:flex-shrink justify-center lg:justify-start flex-wrap gap-4">
-                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-[12px] rounded-lg font-semibold leading-none transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center">
-                        Hemen Teklif Al
-                        <span class="material-icons ml-2">arrow_forward</span>
-                    </button>
-                    <button class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-[12px] rounded-lg font-medium leading-none transition-all duration-300 inline-flex items-center">
-                        <span class="material-icons mr-2">call</span>
-                        Şimdi Arayalım
-                    </button>
-                </div>
-
-                <!-- Amazon Logo and Testimonial -->
-                <div class="hidden lg:block pt-6 border-t-[1px] border-gray-100">
-                    <div class="swiper hero-testimonial-swiper relative">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 - Amazon -->
-                            <div class="swiper-slide">
-                                <div class="flex items-center mb-3">
-                                    <div class="testimonial-header flex items-center flex-1">
-                                        <img src="/src/assets/images/brand-amazon.png" alt="Amazon" class="h-6 mr-3" onerror="this.outerHTML='<div class=\u0022w-16 h-6 bg-orange-100 rounded flex items-center justify-center mr-3\u0022><span class=\u0022text-orange-500 text-xs font-bold\u0022>amazon</span></div>'">
-                                        <div class="border-l-[1px] pl-3 border-gray-200">
-                                            <h4 class="text-sm mb-0 text-gray-900 font-medium mr-2">Sarah Johnson</h4>
-                                            <p class="text-sm mb-0 text-gray-500">E-commerce Manager</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    "Awwex ile uluslararası gönderilerimizi yönetmek çok kolay oldu. Tek bir platformdan tüm kargo şirketlerinin fiyatlarını karşılaştırabiliyoruz."
-                                </p>
-                            </div>
-                            <!-- Slide 2 - Different Brand -->
-                            <div class="swiper-slide">
-                                <div class="flex items-center mb-3">
-                                    <div class="testimonial-header flex items-center flex-1">
-                                        <img src="/src/assets/images/brands/shopify.png" alt="Shopify" class="h-6 mr-3" onerror="this.outerHTML='<div class=\u0022w-16 h-6 bg-green-100 rounded flex items-center justify-center mr-3\u0022><span class=\u0022text-green-500 text-xs font-bold\u0022>shopify</span></div>'">
-                                        <div class="border-l-[1px] pl-3 border-gray-200">
-                                            <h4 class="text-sm mb-0 text-gray-900 font-medium mr-2">Michael Chen</h4>
-                                            <p class="text-sm mb-0 text-gray-500">Store Owner</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    "Müşterilerimize daha hızlı ve uygun fiyatlı kargo seçenekleri sunabiliyoruz. Fulfillment hizmeti işimizi çok kolaylaştırdı."
-                                </p>
-                            </div>
-                            <!-- Slide 3 - Another Brand -->
-                            <div class="swiper-slide">
-                                <div class="flex items-center mb-3">
-                                    <div class="testimonial-header flex items-center flex-1">
-                                        <img src="/src/assets/images/brands/etsy.png" alt="Etsy" class="h-6 mr-3" onerror="this.outerHTML='<div class=\u0022w-16 h-6 bg-orange-100 rounded flex items-center justify-center mr-3\u0022><span class=\u0022text-orange-500 text-xs font-bold\u0022>etsy</span></div>'">
-                                        <div class="border-l-[1px] pl-3 border-gray-200">
-                                            <h4 class="text-sm mb-0 text-gray-900 font-medium mr-2">Emma Wilson</h4>
-                                            <p class="text-sm mb-0 text-gray-500">Handmade Seller</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    "El yapımı ürünlerimi dünya çapında güvenle gönderebiliyorum. Takip sistemi mükemmel çalışıyor."
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Navigation buttons outside the slides -->
-                        <div class="absolute top-0 right-0 z-10 flex space-x-1 justify-end">
-                            <button class="hero-testimonial-prev w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-50 transition-colors duration-200">
-                                <span class="material-icons text-gray-600">keyboard_arrow_left</span>
-                            </button>
-                            <button class="hero-testimonial-next w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-50 transition-colors duration-200">
-                                <span class="material-icons text-gray-600">keyboard_arrow_right</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="lg:col-span-5 max-w-md">
+            <h1 class="font-bold text-gray-900 mb-6 leading-tight header-1">
+                Yurt Dışı Gönderilerinizi Awwex ile Yönetin
+            </h1>
+            
+            <p class="text-gray-600 mb-8 leading-relaxed max-w-md">
+                Dünyanın dört bir yanına gönderim yapmak artık çok daha kolay! 200+ ülkeye özel kargo tekliflerinizi tek adrestan gönderin, karşılaştırın ve satın almanızla yönetin.
+            </p>
+            
+            <!-- CTA Button -->
+            <div class="mb-8 lg:mb-12 flex items-center lg:flex-shrink justify-center lg:justify-start flex-wrap gap-4">
+                <button class="btn-primary">
+                Hemen Teklif Al
+                <span class="material-icons ml-2">arrow_forward</span>
+                </button>
+                <button class="btn-secondary">
+                <span class="material-icons mr-2">call</span>
+                Şimdi Arayalım
+                </button>
             </div>
 
-            <!-- Center Content - Airplane -->
-            <div class="lg:col-span-4 flex justify-center items-center relative">
-                <!-- Service Card 1 - Gönderinizi Yönetin -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 relative">
-                    <!-- Background gradient -->
-                    <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-orange-50 to-transparent opacity-60"></div>
-                    
-                    <div class="relative z-10 p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-bold text-gray-900 text-lg">Gönderinizi Yönetin</h3>
-                            <span class="material-icons text-gray-400 hover:text-orange-500 transition-colors">arrow_forward</span>
+            <!-- Amazon Logo and Testimonial -->
+            <div class="hidden lg:block pt-6 border-t-[1px] border-gray-100">
+                <div class="swiper hero-testimonial-swiper relative">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 - Amazon -->
+                    <div class="swiper-slide">
+                    <div class="flex items-center mb-3">
+                        <div class="testimonial-header flex items-center flex-1">
+                        <img src="/assets/images/brand-amazon.png" alt="Amazon" class="h-6 mr-3" onerror="this.outerHTML='<div class=\u0022w-16 h-6 bg-orange-100 rounded flex items-center justify-center mr-3\u0022><span class=\u0022text-orange-500 text-xs font-bold\u0022>amazon</span></div>'">
+                        <div class="border-l-[1px] pl-3 border-gray-200">
+                            <h4 class="text-xs mb-0 text-gray-900 font-medium mr-2">Sarah Johnson</h4>
+                            <p class="text-xs mb-0 text-gray-500">E-commerce Manager</p>
                         </div>
-                        
-                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                            Tüm gönderi sürecinizi tek bir panelden takip edin.
-                        </p>
+                        </div>
                     </div>
-                    <!-- Airplane image -->
-                    <div class="flex justify-center z-[11] -mb-8">
-                        <img src="/src/assets/images/hero-airplane.png" alt="Airplane" class="w-full h-auto" onerror="this.outerHTML='<div class=\u0022w-32 h-20 bg-orange-100 rounded-lg flex items-center justify-center\u0022><span class=\u0022material-icons text-orange-500 text-3xl\u0022>flight_takeoff</span></div>'">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        "Awwex ile uluslararası gönderilerimizi yönetmek çok kolay oldu. Tek bir platformdan tüm kargo şirketlerinin fiyatlarını karşılaştırabiliyoruz."
+                    </p>
                     </div>
+                    <!-- Slide 2 - Different Brand -->
+                    <div class="swiper-slide">
+                    <div class="flex items-center mb-3">
+                        <div class="testimonial-header flex items-center flex-1">
+                        <img src="/assets/images/brands/shopify.png" alt="Shopify" class="h-6 mr-3" onerror="this.outerHTML='<div class=\u0022w-16 h-6 bg-green-100 rounded flex items-center justify-center mr-3\u0022><span class=\u0022text-green-500 text-xs font-bold\u0022>shopify</span></div>'">
+                        <div class="border-l-[1px] pl-3 border-gray-200">
+                            <h4 class="text-xs mb-0 text-gray-900 font-medium mr-2">Michael Chen</h4>
+                            <p class="text-xs mb-0 text-gray-500">Store Owner</p>
+                        </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        "Müşterilerimize daha hızlı ve uygun fiyatlı kargo seçenekleri sunabiliyoruz. Fulfillment hizmeti işimizi çok kolaylaştırdı."
+                    </p>
+                    </div>
+                    <!-- Slide 3 - Another Brand -->
+                    <div class="swiper-slide">
+                    <div class="flex items-center mb-3">
+                        <div class="testimonial-header flex items-center flex-1">
+                        <img src="/assets/images/brands/etsy.png" alt="Etsy" class="h-6 mr-3" onerror="this.outerHTML='<div class=\u0022w-16 h-6 bg-orange-100 rounded flex items-center justify-center mr-3\u0022><span class=\u0022text-orange-500 text-xs font-bold\u0022>etsy</span></div>'">
+                        <div class="border-l-[1px] pl-3 border-gray-200">
+                            <h4 class="text-xs mb-0 text-gray-900 font-medium mr-2">Emma Wilson</h4>
+                            <p class="text-xs mb-0 text-gray-500">Handmade Seller</p>
+                        </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        "El yapımı ürünlerimi dünya çapında güvenle gönderebiliyorum. Takip sistemi mükemmel çalışıyor."
+                    </p>
+                    </div>
+                </div>
+                
+                <!-- Navigation buttons outside the slides -->
+                <div class="absolute top-0 right-0 z-10 flex space-x-1 justify-end">
+                    <button class="hero-testimonial-prev w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-50 transition-colors duration-200">
+                    <span class="material-icons text-gray-600">keyboard_arrow_left</span>
+                    </button>
+                    <button class="hero-testimonial-next w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-50 transition-colors duration-200">
+                    <span class="material-icons text-gray-600">keyboard_arrow_right</span>
+                    </button>
+                </div>
                 </div>
             </div>
+            </div>
 
-            <!-- Right Content - Service Cards -->
-            <div class="lg:col-span-3 space-y-4">
-                <!-- Service Card 2 - Teklifleri Karşılaştır -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-                    <!-- Background gradient -->
-                    <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-50 to-transparent opacity-60"></div>
-                    
-                    <div class="relative z-10 p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-bold text-gray-900 text-lg">Teklifleri Karşılaştır</h3>
-                            <span class="material-icons text-gray-400 hover:text-blue-500 transition-colors">arrow_forward</span>
+            <!-- Right Content: take the rest of the columns -->
+            <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                <!-- Center Content - Airplane -->
+                <div class="sm:col-span-1 flex justify-center items-center relative">
+                    <!-- Service Card 1 - Gönderinizi Yönetin -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 relative">
+                        <div class="relative z-10 p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="font-bold text-gray-900 text-xl">Gönderinizi Yönetin</h3>
+                                <span class="material-icons text-gray-900 hover:text-orange-500 transition-colors">arrow_forward</span>
+                            </div>
+                            
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                                Tüm gönderi sürecinizi tek bir panelden takip edin.
+                            </p>
                         </div>
-                        
-                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                            Farklı taşıyıcılar arasından en uygun fiyat ve teslimat süresini seçin.
-                        </p>
-                        
-                    </div>
-                    <!-- Content area with woman and price elements -->
-                    <!-- Woman with laptop image -->
-                    <div class="flex justify-end z-[11] -mt-10">
-                        <img src="/src/assets/images/hero-woman-laptop.png" alt="Professional comparing prices" class="w-full h-auto" onerror="this.outerHTML='<div class=\u0022w-20 h-24 bg-blue-100 rounded-lg flex items-center justify-center\u0022><span class=\u0022material-icons text-blue-500 text-2xl\u0022>person</span></div>'">
+                        <!-- Airplane image -->
+                        <div class="flex justify-center z-[11] -mb-8">
+                            <img src="/assets/images/hero-airplane.png" alt="Airplane" class="w-full h-auto" onerror="this.outerHTML='<div class=\u0022w-32 h-20 bg-orange-100 rounded-lg flex items-center justify-center\u0022><span class=\u0022material-icons text-orange-500 text-3xl\u0022>flight_takeoff</span></div>'">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Service Card 3 - Fulfillment Desteği -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 relative">
-                    <!-- Background gradient -->
-                    <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-green-50 to-transparent opacity-60"></div>
-                    
-                    <div class="relative z-10 p-6 pb-0">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="font-bold text-gray-900 text-lg">Fulfillment Desteği</h3>
-                            <span class="material-icons text-gray-400 hover:text-green-500 transition-colors">arrow_forward</span>
+                <!-- Right Content - Service Cards -->
+                <div class="sm:col-span-1 space-y-4">
+                    <!-- Service Card 2 - Teklifleri Karşılaştır -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                        <div class="relative z-10 p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="font-bold text-gray-900 text-xl">Teklifleri Karşılaştır</h3>
+                                <span class="material-icons text-gray-400 hover:text-orange-500 transition-colors">arrow_forward</span>
+                            </div>
+                            
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                                Farklı taşıyıcılar arasından en uygun fiyat ve teslimat süresini seçin.
+                            </p>
+                            
                         </div>
-                        
-                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                            Depolama, paketleme ve gönderim dahil uçtan uca hizmet.
-                        </p>
-                        
+                        <!-- Content area with woman and price elements -->
+                        <!-- Woman with laptop image -->
+                        <div class="flex justify-end z-[11] -mt-10">
+                            <img src="/assets/images/hero-woman-laptop.png" alt="Professional comparing prices" class="w-full h-auto" onerror="this.outerHTML='<div class=\u0022w-20 h-24 bg-blue-100 rounded-lg flex items-center justify-center\u0022><span class=\u0022material-icons text-blue-500 text-2xl\u0022>person</span></div>'">
+                        </div>
                     </div>
-                    <!-- Packages on conveyor belt -->
-                    <div class="flex justify-center -mb-8 z-[11]">
-                        <img src="/src/assets/images/hero-packages.png" alt="Packages on conveyor belt" class="w-full h-auto" onerror="this.outerHTML='<div class=\u0022w-full max-w-[140px] h-16 bg-green-100 rounded-lg flex items-center justify-center\u0022><span class=\u0022material-icons text-green-500 text-2xl\u0022>inventory_2</span></div>'">
+
+                    <!-- Service Card 3 - Fulfillment Desteği -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 relative">
+                        <div class="relative z-10 p-6 pb-0">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="font-bold text-gray-900 text-xl">Fulfillment Desteği</h3>
+                                <span class="material-icons text-gray-900 hover:text-orange-500 transition-colors">arrow_forward</span>
+                            </div>
+                            
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                                Depolama, paketleme ve gönderim dahil uçtan uca hizmet.
+                            </p>
+                            
+                        </div>
+                        <!-- Packages on conveyor belt -->
+                        <div class="flex justify-center -mb-8 z-[11]">
+                            <img src="/assets/images/hero-packages.png" alt="Packages on conveyor belt" class="w-full h-auto" onerror="this.outerHTML='<div class=\u0022w-full max-w-[140px] h-16 bg-green-100 rounded-lg flex items-center justify-center\u0022><span class=\u0022material-icons text-green-500 text-2xl\u0022>inventory_2</span></div>'">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -594,49 +589,49 @@
     <!-- Floating Brand Logos -->
     <!-- Top Row -->
     <div class="absolute top-[8%] left-[8%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/parasut.png" alt="Parasut" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/parasut.png" alt="Parasut" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute top-[5%] left-[25%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/ideasoft.png" alt="IdeaSoft" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/ideasoft.png" alt="IdeaSoft" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute top-[10%] right-[25%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/etsy.png" alt="Etsy" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/etsy.png" alt="Etsy" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute top-[6%] right-[8%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/ikas.png" alt="IKAS" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/ikas.png" alt="IKAS" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <!-- Middle Row -->
     <div class="absolute top-[50%] left-[5%] transform -translate-y-1/2 bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/walmart.png" alt="Walmart" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/walmart.png" alt="Walmart" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute top-[35%] left-[18%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/fedex.png" alt="FedEx" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/fedex.png" alt="FedEx" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute top-[50%] right-[5%] transform -translate-y-1/2 bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/ebay.png" alt="eBay" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/ebay.png" alt="eBay" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute top-[35%] right-[18%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/ticimax.png" alt="Ticimax" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/ticimax.png" alt="Ticimax" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <!-- Bottom Row -->
     <div class="absolute bottom-[12%] left-[20%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/ptt.png" alt="PTT" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/ptt.png" alt="PTT" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute bottom-[8%] left-[45%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/dhl.png" alt="DHL" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/dhl.png" alt="DHL" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
     
     <div class="absolute bottom-[12%] right-[20%] bg-white rounded-3xl shadow-lg p-4 md:p-6">
-        <img src="/src/assets/images/brands/shopify.png" alt="Shopify" class="max-w-full max-h-7 w-auto h-auto object-contain">
+        <img src="/assets/images/brands/shopify.png" alt="Shopify" class="max-w-full max-h-7 w-auto h-auto object-contain">
     </div>
 
     <!-- Center Content -->
@@ -695,7 +690,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/domestic-cargo.svg" alt="Yurtiçi Kargo" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/domestic-cargo.svg" alt="Yurtiçi Kargo" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Yurtiçi Kargo</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -711,7 +706,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/warehouse.svg" alt="Fullfilment ve Depolama" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/warehouse.svg" alt="Fullfilment ve Depolama" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Fullfilment ve Depolama</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -727,7 +722,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/customs.svg" alt="Gümrükleme" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/customs.svg" alt="Gümrükleme" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Gümrükleme</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -743,7 +738,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/integrations.svg" alt="Entegrasyonlar" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/integrations.svg" alt="Entegrasyonlar" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Entegrasyonlar</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -759,7 +754,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/freight.svg" alt="Navlun yönetimi" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/freight.svg" alt="Navlun yönetimi" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Navlun yönetimi</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -775,7 +770,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/export-panel.svg" alt="Awwex E-İhracat Paneli" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/export-panel.svg" alt="Awwex E-İhracat Paneli" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Awwex E-İhracat Paneli</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -791,7 +786,7 @@
             <!-- Service Card Component -->
 <!-- Props: icon, title, desc, variant, buttonText, buttonUrl -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-    <img src="/src/assets/icons/support.svg" alt="Destek Merkezi" class="w-12 h-12 mb-4">
+    <img src="/assets/icons/support.svg" alt="Destek Merkezi" class="w-12 h-12 mb-4">
     <h4 class="text-xl font-bold text-gray-900 mb-2">Destek Merkezi</h4>
     <p class="text-gray-600 mb-4">
         Praesent tincidunt condimentum faucibus quam placerat.
@@ -853,7 +848,7 @@
                 <!-- Image/Interface -->
                 <div class="flex-1">
                     <div class="overflow-hidden">
-                        <img src="/src/assets/images/ecom-int-1.png" alt="Awwex Smart Panel Interface" class="w-full h-full object-cover" />
+                        <img src="/assets/images/ecom-int-1.png" alt="Awwex Smart Panel Interface" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
@@ -888,7 +883,7 @@
                 <!-- Image/Interface -->
                 <div class="flex-1">
                     <div class="overflow-hidden">
-                        <img src="/src/assets/images/ecom-int-2.png" alt="Optimize Process Form Interface" class="w-full h-full object-cover" />
+                        <img src="/assets/images/ecom-int-2.png" alt="Optimize Process Form Interface" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
@@ -922,7 +917,7 @@
                 <!-- Image -->
                 <div class="flex-1">
                     <div class="overflow-hidden">
-                        <img src="/src/assets/images/ecom-int-3.png" alt="Asset GLI Truck" class="w-full h-full object-cover" />
+                        <img src="/assets/images/ecom-int-3.png" alt="Asset GLI Truck" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
@@ -939,7 +934,7 @@
                 <!-- Video Background/Thumbnail -->
                 <div class="relative aspect-video">
                     <!-- Background Image - Woman in Chair -->
-                    <img src="/src/assets/images/video-preview.jpg" alt="AwwEx Video Thumbnail" 
+                    <img src="/assets/images/video-preview.jpg" alt="AwwEx Video Thumbnail" 
                          class="absolute inset-0 w-full h-full object-cover object-center" />
                     
                     <!-- Overlay -->
@@ -947,7 +942,7 @@
                     
                     <!-- Logo in Top-Left Corner -->
                     <div class="absolute top-6 left-6 z-20">
-                        <img src="/src/assets/images/logo-small.png" alt="AwwEx Logo" class="h-8 w-auto" />
+                        <img src="/assets/images/logo-small.png" alt="AwwEx Logo" class="h-8 w-auto" />
                     </div>
                     
                     <!-- Play Button and Title in Center -->
@@ -1049,7 +1044,7 @@ document.addEventListener('keydown', function(e) {
             <!-- Left Side - Image -->
             <div class="relative">
                 <div class="relative">
-                    <img src="/src/assets/images/contact-cta-image.png" alt="Team Images" class="w-full h-auto object-contain" />
+                    <img src="/assets/images/contact-cta-image.png" alt="Team Images" class="w-full h-auto object-contain" />
                 </div>
             </div>
             
@@ -1128,7 +1123,7 @@ document.addEventListener('keydown', function(e) {
             <!-- Left Side - Image -->
             <div class="relative">
                 <img 
-                    src="/src/assets/images/shipment-packages.png" 
+                    src="/assets/images/shipment-packages.png" 
                     alt="Shipment Packages" 
                     class="w-full h-auto max-w-md mx-auto"
                 >
@@ -1535,7 +1530,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <!-- Airplane Image - Positioned outside tab body with overflow hidden -->
                         <div class="absolute top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block" style="right: -5%; z-index: 10;">
                             <img 
-                                src="/src/assets/images/airplane-for-tab.png" 
+                                src="/assets/images/airplane-for-tab.png" 
                                 alt="Airplane" 
                                 class="w-full h-auto opacity-90"
                             >
@@ -1597,7 +1592,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="max-w-7xl mx-auto p-4 md:p-8 lg:p-16 relative overflow-hidden rounded-3xl bg-gray-950">
         <!-- Background Image -->
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-             style="background-image: url('/src/assets/images/fan-fact-bg.png');">
+             style="background-image: url('/assets/images/fan-fact-bg.png');">
             <!-- Dark overlay -->
             <div class="absolute inset-0 bg-black/60"></div>
             <!-- Dotted pattern overlay -->
@@ -1630,7 +1625,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Stat Card 1 -->
                 <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
                     <div class="flex justify-center mb-4">
-                        <img src="/src/assets/icons/fan-fact/package-check.svg" alt="Package Check" class="w-12 h-12">
+                        <img src="/assets/icons/fan-fact/package-check.svg" alt="Package Check" class="w-12 h-12">
                     </div>
                     <div class="text-3xl md:text-4xl font-bold text-white mb-2">10,482,739+</div>
                     <div class="text-white/80 text-sm">
@@ -1642,7 +1637,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Stat Card 2 -->
                 <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
                     <div class="flex justify-center mb-4">
-                        <img src="/src/assets/icons/fan-fact/users-03.svg" alt="Users" class="w-12 h-12">
+                        <img src="/assets/icons/fan-fact/users-03.svg" alt="Users" class="w-12 h-12">
                     </div>
                     <div class="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
                     <div class="text-white/80 text-sm">
@@ -1654,7 +1649,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Stat Card 3 -->
                 <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
                     <div class="flex justify-center mb-4">
-                        <img src="/src/assets/icons/fan-fact/clock-check.svg" alt="Clock Check" class="w-12 h-12">
+                        <img src="/assets/icons/fan-fact/clock-check.svg" alt="Clock Check" class="w-12 h-12">
                     </div>
                     <div class="text-3xl md:text-4xl font-bold text-white mb-2">%40</div>
                     <div class="text-white/80 text-sm">
@@ -1666,7 +1661,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Stat Card 4 -->
                 <div class="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
                     <div class="flex justify-center mb-4">
-                        <img src="/src/assets/icons/fan-fact/globe-05.svg" alt="Globe" class="w-12 h-12">
+                        <img src="/assets/icons/fan-fact/globe-05.svg" alt="Globe" class="w-12 h-12">
                     </div>
                     <div class="text-3xl md:text-4xl font-bold text-white mb-2">220</div>
                     <div class="text-white/80 text-sm">
@@ -1714,7 +1709,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- Image Area (60%) -->
                             <div class="h-3/5 relative overflow-hidden">
                                 <img 
-                                    src="/src/assets/images/int-cargo-1.png" 
+                                    src="/assets/images/int-cargo-1.png" 
                                     alt="Yurt Dışı Kargo" 
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                                 >
@@ -1746,7 +1741,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- Image Area (60%) -->
                             <div class="h-3/5 relative overflow-hidden">
                                 <img 
-                                    src="/src/assets/images/int-cargo-2.png" 
+                                    src="/assets/images/int-cargo-2.png" 
                                     alt="Gümrükleme" 
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                                 >
@@ -1778,7 +1773,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- Image Area (60%) -->
                             <div class="h-3/5 relative overflow-hidden">
                                 <img 
-                                    src="/src/assets/images/int-cargo-3.png" 
+                                    src="/assets/images/int-cargo-3.png" 
                                     alt="Navlun Lojistik Yönetimi" 
                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                                 >
@@ -1974,7 +1969,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- Full Width Map -->
         <div class="relative w-full">
-            <img src="/src/assets/images/maps-pin.png" alt="Global Coverage Map" class="w-full h-auto">
+            <img src="/assets/images/maps-pin.png" alt="Global Coverage Map" class="w-full h-auto">
         </div>
     </div>
 </section>
@@ -2087,7 +2082,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="flex-grow">
                     <div class="w-full h-48 rounded-lg flex items-center justify-center mb-4">
-                        <img src="/src/assets/images/ebook-1.png" alt="E-book 1" class="w-full h-full object-contain">
+                        <img src="/assets/images/ebook-1.png" alt="E-book 1" class="w-full h-full object-contain">
                     </div>
                 </div>
                 <div class="px-6 pb-6 mt-auto">
@@ -2110,7 +2105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="flex-grow">
                     <div class="w-full h-48 rounded-lg flex items-center justify-center mb-4">
-                        <img src="/src/assets/images/ebook-2.png" alt="E-book 2" class="w-full h-full object-contain">
+                        <img src="/assets/images/ebook-2.png" alt="E-book 2" class="w-full h-full object-contain">
                     </div>
                 </div>
                 <div class="px-6 pb-6 mt-auto">
@@ -2133,7 +2128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="flex-grow">
                     <div class="w-full h-48 rounded-lg flex items-center justify-center mb-4">
-                        <img src="/src/assets/images/ebook-3.png" alt="E-book 3" class="w-full h-full object-contain">
+                        <img src="/assets/images/ebook-3.png" alt="E-book 3" class="w-full h-full object-contain">
                     </div>
                 </div>
                 <div class="px-6 pb-6 mt-auto">
@@ -2156,7 +2151,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="flex-grow">
                     <div class="w-full h-48 rounded-lg flex items-center justify-center mb-4">
-                        <img src="/src/assets/images/ebook-4.png" alt="E-book 4" class="w-full h-full object-contain">
+                        <img src="/assets/images/ebook-4.png" alt="E-book 4" class="w-full h-full object-contain">
                     </div>
                 </div>
                 <div class="px-6 pb-6 mt-auto">
@@ -2261,7 +2256,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="space-y-8">
                                 <!-- Brand Logo -->
                                 <div class="flex items-center space-x-4">
-                                    <img src="/src/assets/images/brand-amazon.png" alt="Amazon" class="h-8">
+                                    <img src="/assets/images/brand-amazon.png" alt="Amazon" class="h-8">
                                 </div>
                                 
                                 <!-- Testimonial Content -->
@@ -2280,7 +2275,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- Right Image -->
                             <div class="flex justify-center lg:justify-end">
                                 <div class="relative">
-                                    <img src="/src/assets/images/users/user-1.jpg" alt="User testimonial" class="w-80 h-80 object-cover rounded-2xl shadow-lg">
+                                    <img src="/assets/images/users/user-1.jpg" alt="User testimonial" class="w-80 h-80 object-cover rounded-2xl shadow-lg">
                                 </div>
                             </div>
                         </div>
@@ -2293,7 +2288,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="space-y-8">
                                 <!-- Brand Logo -->
                                 <div class="flex items-center space-x-4">
-                                    <img src="/src/assets/images/brands/shopify.png" alt="Shopify" class="h-8">
+                                    <img src="/assets/images/brands/shopify.png" alt="Shopify" class="h-8">
                                 </div>
                                 
                                 <!-- Testimonial Content -->
@@ -2312,7 +2307,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- Right Image -->
                             <div class="flex justify-center lg:justify-end">
                                 <div class="relative">
-                                    <img src="/src/assets/images/users/user-1.jpg" alt="User testimonial" class="w-80 h-80 object-cover rounded-2xl shadow-lg">
+                                    <img src="/assets/images/users/user-1.jpg" alt="User testimonial" class="w-80 h-80 object-cover rounded-2xl shadow-lg">
                                 </div>
                             </div>
                         </div>
@@ -2325,7 +2320,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="space-y-8">
                                 <!-- Brand Logo -->
                                 <div class="flex items-center space-x-4">
-                                    <img src="/src/assets/images/brands/etsy.png" alt="Etsy" class="h-8">
+                                    <img src="/assets/images/brands/etsy.png" alt="Etsy" class="h-8">
                                 </div>
                                 
                                 <!-- Testimonial Content -->
@@ -2344,7 +2339,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <!-- Right Image -->
                             <div class="flex justify-center lg:justify-end">
                                 <div class="relative">
-                                    <img src="/src/assets/images/users/user-1.jpg" alt="User testimonial" class="w-80 h-80 object-cover rounded-2xl shadow-lg">
+                                    <img src="/assets/images/users/user-1.jpg" alt="User testimonial" class="w-80 h-80 object-cover rounded-2xl shadow-lg">
                                 </div>
                             </div>
                         </div>
@@ -2554,7 +2549,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- CTA Image -->
                 <div class="lg:absolute bottom-0 right-0">
                     <img 
-                        src="/src/assets/images/footer-cta-image.png" 
+                        src="/assets/images/footer-cta-image.png" 
                         alt="AwwEx Dashboard Preview" 
                         class="w-full h-auto"
                     >
@@ -2567,7 +2562,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Logo -->
             <div class="mb-6">
                 <div class="inline-flex items-center space-x-2">
-                    <a href="#"><img src="/src/assets/images/logo-footer.png" alt="logo"></a>
+                    <a href="#"><img src="/assets/images/logo-footer.png" alt="logo"></a>
                 </div>
             </div>
             
@@ -2628,7 +2623,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js"></script>
     
     <!-- Main JS -->
-    <script src="./js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     
     <!-- Initialize Components -->
     <script>
