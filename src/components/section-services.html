@@ -1,11 +1,11 @@
 <!-- Services Section -->
-<section class="py-20 bg-white">
+<section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Single grid layout with featured card spanning 2 columns -->
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Featured Service Card - spans 2 columns -->
             <div class="col-span-2">
-                <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-2xl p-8 text-white relative overflow-hidden">
+                <div class="bg-gradient-to-b from-orange-400 to-orange-500 rounded-2xl p-8 text-white relative overflow-hidden">
                     <div class="relative z-10 text-center lg:text-left">
                         <div class="w-full lg:w-[70%] relative">
                             <h3 class="font-bold pl-2 mb-6 header-2">Yurt Dışı Gönderilerinizi Awwex ile Yönetin</h3>
@@ -22,22 +22,24 @@
                                 </defs>
                             </svg>
                         </div>
-                        <button class="bg-white text-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+                        <button class="bg-white text-gray-900 px-6 py-3 w-full max-w-72 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
                             Hemen Teklif Al
                         </button>
                     </div>
                     <!-- Background decoration -->
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <div class="absolute bottom-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mb-12"></div>
+                    <div class="absolute bottom-0 right-0">
+                        <img src="/assets/images/feature-service-card-bg.png" alt="card-bg">
+                    </div>
+                    
                 </div>
             </div>
 
             <!-- Yurtiçi Kargo Service Card -->
-            <component:service-card icon="/assets/icons/domestic-cargo.svg" title="Yurtiçi Kargo" desc="Praesent tincidunt condimentum faucibus quam placerat." variant="1" buttonText="Şimdi İncele" buttonUrl="/services/domestic-cargo" />
+            <component:service-card icon="/assets/icons/globe-05.svg" title="Yurtiçi Kargo" desc="Praesent tincidunt condimentum faucibus quam placerat." variant="1" buttonText="Şimdi İncele" buttonUrl="/services/domestic-cargo" />
 
             <!-- Fullfilment ve Depolama Service -->
             <component:service-card 
-                icon="/assets/icons/warehouse.svg" 
+                icon="/assets/icons/package-check.svg" 
                 title="Fullfilment ve Depolama" 
                 desc="Praesent tincidunt condimentum faucibus quam placerat." 
                 variant="1"
@@ -46,7 +48,7 @@
 
             <!-- Gümrükleme Service -->
             <component:service-card 
-                icon="/assets/icons/customs.svg" 
+                icon="/assets/icons/file-shield-02.svg" 
                 title="Gümrükleme" 
                 desc="Praesent tincidunt condimentum faucibus quam placerat." 
                 variant="1"
@@ -55,7 +57,7 @@
 
             <!-- Entegrasyonlar Service -->
             <component:service-card 
-                icon="/assets/icons/integrations.svg" 
+                icon="/assets/icons/data.svg" 
                 title="Entegrasyonlar" 
                 desc="Praesent tincidunt condimentum faucibus quam placerat." 
                 variant="1"
@@ -73,7 +75,7 @@
 
             <!-- E-İhracat Paneli Service -->
             <component:service-card 
-                icon="/assets/icons/export-panel.svg" 
+                icon="/assets/icons/globe-cart.svg" 
                 title="Awwex E-İhracat Paneli" 
                 desc="Praesent tincidunt condimentum faucibus quam placerat." 
                 variant="1"
@@ -82,7 +84,7 @@
 
             <!-- Destek Merkezi Service -->
             <component:service-card 
-                icon="/assets/icons/support.svg" 
+                icon="/assets/icons/life-buoy-01.svg" 
                 title="Destek Merkezi" 
                 desc="Praesent tincidunt condimentum faucibus quam placerat." 
                 variant="1"
